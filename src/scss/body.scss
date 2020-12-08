@@ -1,0 +1,23 @@
+.body {
+    background: #E5E5E5;
+}
+
+.container {
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: auto;
+    margin-left: auto;
+
+  @media screen and (min-width: $mobile) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1200px;
+  }
+}

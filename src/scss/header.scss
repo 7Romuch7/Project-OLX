@@ -3,9 +3,17 @@
 }
 
 .search {
-    position: absolute;
-    top: 28px;
-    left: 24px;
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        top: 28px;
+        right: 25px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        position: absolute;
+        top: 28px;
+        left: 24px;
+    }
 }
 
 .logo {
@@ -18,32 +26,45 @@
     text-transform: uppercase;
 
     color: $black-color;
-}
-.user__profile {
-    @media screen and (min-width: $desktop) {
-        visibility: hidden;
+
+    @media screen and (max-width: 767px) {
+        position: absolute;
+        top: 30px;
+        right: 40%;
     }
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 150px;
+    } 
 }
 
 .btn {
-    width: 178px;
-    height: 70px;
-    background-color:$btn-color;
-    padding: 29px 15px;
-    font-family: $basic-font;
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 12px;
-    letter-spacing: 1.2;
-    text-align: center;
-    text-transform: uppercase;
-    color: $white-color;
-    border: none;
-    margin-left: 19px;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 178px;
+        height: 70px;
+        background-color:$btn-color;
+        padding: 29px 15px;
+        font-family: $basic-font;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+        color: $white-color;
+        border: none;
+    }
+    @media screen and (min-width: $tablet) {
+        margin-left: 19px;
+    }
 }
 
 .modal_menu {
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: 1199px) {
         
         position: absolute;
         top: 100%;
@@ -51,7 +72,7 @@
 
         padding-top: 70px;
         width: 305px;
-        height: 815px;
+        height: 1024px;
 
         background-color: $menu-color;
     }
@@ -62,46 +83,48 @@
 }
 
 .info__content {
-    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
 }
 
-.menu-button {
-    @media screen and (min-width: $desktop) {
-        display: none;
-    }
-}
-
 .header__nav {
-    padding: 27px 0 26px 0px;
+    border: 1px solid #E2E3E5;
     display: flex;
     align-items: flex-start;
     align-items: baseline;
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: 1199px) {
         flex-direction: column;
+        .header__link + .header__link {
+            border-top: 1px solid #E2E3E5;
+            
+        }
     }
 
     @media screen and (min-width: $desktop) {
-        border: 1px solid #E2E3E5;
-       
+        padding: 27px 0 26px 0px;
         .header__link + .header__link {
-            margin-left: 42px;
+            margin-left: 40px;
         }
     }
 }
 
 .header__link-login {
-    font-family: $basic-font;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: 1.17;
-    color: $black-color;
-    text-decoration: none;
-    margin-left: 229px;
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-family: $basic-font;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 1.17;
+        color: $black-color;
+        text-decoration: none;
+        margin-left: 229px;
+    }
 }
 
 .header__link {
@@ -113,8 +136,9 @@
     color: $black-color;
     text-decoration: none;
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: 1199px) {
         width: 100%;
+        padding: 27px 0 26px 34px;
     }
 }
 
@@ -124,12 +148,97 @@
     font-weight: 400;
     line-height: 15px;
     letter-spacing: 1.25;
-    margin-left: 85px;
     color: $black-color;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-left: 14px;
+    }
 }
 
 .replay {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-left: 12px;
+    }
+}
+
+.user__profile-header {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (max-width: $tablet) {
+        position: absolute;
+        top: 25px;
+        right: 28%;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.user__profile-menu {
+    width: 100%;
+    padding: 27px 0 26px 34px;
+    border-bottom: 1px solid #E2E3E5;
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.menu-button {
     position: absolute;
-    top: 97px;
-    right: 150px;
+    border: none;
+    outline: none;
+    background-color: $white-color;
+
+    @media screen and (max-width: 767px) {
+        top: 30px;
+        left: 30px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        top: 100px;
+        left: 25px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 30px;
+    right: 24px;
+    border: none;
+    outline: none;
+    background-color: $white-color;
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.filter {
+        display: flex;
+        align-items: center;
+
+    @media screen and (max-width: 1199px) {
+        justify-content: flex-end;
+        border: 1px solid #E2E3E5;
+        padding: 24px 20px 30px 0px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        position: absolute;
+        top: 97px;
+        right: 42px;
+    }
 }

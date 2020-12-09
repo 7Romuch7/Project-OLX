@@ -75,14 +75,16 @@ p {
 }
 
 .dev-with-footer::before {
-  content: '';
-  position: absolute;
-  left: -9px;
-  top: -3px;
-  height: 20px;
-  width: 1px;
-  display: inline-block;
-  background-color: #e2e3e5;
+  @media screen and (min-width: $tablet) {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: -3px;
+    height: 20px;
+    width: 1px;
+    display: inline-block;
+    background-color: #e2e3e5;
+  }
 }
 
 .goit-footer {

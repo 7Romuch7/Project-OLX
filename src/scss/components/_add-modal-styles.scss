@@ -5,6 +5,7 @@
     width: 100%;
     height: 100%;
     background-color: $backdrop-color;
+    overflow-y: scroll;
 }
 
 .add-modal__block{
@@ -15,17 +16,17 @@
 
     @media screen and(max-width: 767px){
         width: 290px;
-        height: 875px;
+        // height: 100%;
     }
 
     @media screen and(min-width: $tablet) and (max-width: 1199px){
         width: 724px;
-        height: 698px;
+        max-height: 698px;
     }
     
     @media screen and(min-width: $desktop){
         width: 861px;
-        height: 698px;
+        // height: 698px;
        
     }
 
@@ -41,8 +42,11 @@
     }
 
     @media screen and(min-width: $tablet) and (max-width: 1199px){
-        margin-right: 55px;
-        margin-left: 55px;
+        display: flex;
+        flex-direction: column;
+
+        margin-right: 54px;
+        margin-left: 54px;
     }
     
     @media screen and(min-width: $desktop){
@@ -54,6 +58,19 @@
        
     }
   
+}
+
+.add-modal__close-button{
+    position: absolute;
+    top: 25px;
+    right: 24px;
+    background-color: $white-color;
+    border: none;
+
+    @media screen and(max-width: 767px){
+        top: 15px;
+        right: 14px;
+    }
 }
 
 
@@ -70,30 +87,70 @@ margin-bottom: 30px;
 }
 
 .modal__form-block{
+
+   margin-bottom: 20px;
+  
+
+    @media screen and(max-width: 767px){
+        display: flex;
+        flex-direction: column-reverse;
+        &:last-child{
+            margin-bottom: 30px;
+        }
+    }
     @media screen and(min-width: $desktop){
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 41px;
+        }
+    }
+    @media screen and(min-width: $tablet) and (max-width: 1199px){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        // margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 41px;
+        }
     }
 
      input{
          box-sizing: border-box;
-        
+
+         height: 56px;
          padding-right: 23px;
          padding-left: 23px;
 
-        width: 440px;
-        height: 56px;
+         border: 1px solid $input-color;
+         font-size: 100%;
+         color: $input-color;
+        
+
+        @media screen and(max-width: 767px){
+            width: 251px;
+            
+        }
+    
+        @media screen and(min-width: $tablet) and (max-width: 1199px){
+            width: 458px;
+            
+        }
+        
+        @media screen and(min-width: $desktop){
+            width: 440px;
+            
+           
+        }
        
       
         
-        // background: #FFFFFF;
-        border: 1px solid $input-color;
-       font-size: 100%;
-
-       color: $input-color;
+        
+        
 
 
      }
@@ -106,6 +163,10 @@ margin-bottom: 30px;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
+
+    @media screen and(max-width:767px){
+        margin: 10px;
+    }
     }
 
     textarea{
@@ -116,11 +177,27 @@ margin-bottom: 30px;
 
         resize: vertical;
         width: 440px;
-        min-height: 56px;
+        
         max-height: 56px;
         border: 1px solid #BBBBBB;
         font-size: 100%;
         color: $input-color;
+
+        @media screen and(max-width: 767px){
+            width: 251px;
+            
+        }
+    
+        @media screen and(min-width: $tablet) and (max-width: 1199px){
+            width: 458px;
+            
+        }
+        
+        @media screen and(min-width: $desktop){
+            width: 440px;
+            
+           
+        }
       
 
         
@@ -132,17 +209,77 @@ margin-bottom: 30px;
 }
 .photo-block{
     display: flex;
+    @media screen and(max-width: 767px){
+        // justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    
     
 }
 
 .add-photo{
-    width: 78px;
-   height: 50px;
-   margin-right: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+     
+     background-color: $menu-color;
+
+     @media screen and(max-width: 767px){
+        width: 77px;
+        height: 45px;
+        // flex-basis: 33.33%;
+        margin: 0.2em;
+        // justify-content: flex-start;
+    }
+
+    @media screen and(min-width: $tablet) and (max-width: 1199px){
+        width: 84px;
+        height: 50px;
+        margin-right: 10px;
+     &:last-child{
+        margin-right: 0px;
+         
+    } 
+        
+    }
+    
+    @media screen and(min-width: $desktop){
+        width: 78px;
+        height: 50px;
+        margin-right: 10px;
+        
+       
+    }
 
 
-background-color: $menu-color;
+
+
+
+
+
+
+
+
+    .add-photo__plus{
+        font-family: $basic-font;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 26px;
+// display: flex;
+// align-items: center;
+text-align: center;
+letter-spacing: 0.02em;
+color: $input-color
+    }
 }
+
+
+
+
 
 .modal__button-block{
     display: flex;
@@ -156,15 +293,37 @@ background-color: $menu-color;
         border: none;
 
         font-family: $basic-font;
- font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 14px;
-text-align: center;
-letter-spacing: 0.02em;
-text-transform: uppercase;
+        font-style: normal;
+         font-weight: 500;
+         font-size: 12px;
+         line-height: 14px;
+         text-align: center;
+         letter-spacing: 0.02em;
+         text-transform: uppercase;
 
-color: #FFFFFF;
+          color: #FFFFFF;
+
+          @media screen and(max-width: 767px){
+            width: 251px;
+            height: 50px;
+            // margin-top: 10px;
+            
+        }
+    
+        @media screen and(min-width: $tablet) and (max-width: 1199px){
+            width: 266px;
+            height: 60px;
+            // margin-top: 21px;
+            
+        }
+        
+        @media screen and(min-width: $desktop){
+            width: 210px;
+            height: 60px;
+            // margin-top: 21px;
+            
+           
+        }
 
     }
 }

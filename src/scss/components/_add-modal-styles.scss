@@ -16,7 +16,7 @@
 
     @media screen and(max-width: 767px){
         width: 290px;
-        // height: 100%;
+        
     }
 
     @media screen and(min-width: $tablet) and (max-width: 1199px){
@@ -26,7 +26,7 @@
     
     @media screen and(min-width: $desktop){
         width: 861px;
-        // height: 698px;
+        
        
     }
 
@@ -103,7 +103,7 @@ margin-bottom: 30px;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        // margin-bottom: 20px;
+       
         &:last-child{
             margin-bottom: 41px;
         }
@@ -113,7 +113,7 @@ margin-bottom: 30px;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        // margin-bottom: 20px;
+       
         &:last-child{
             margin-bottom: 41px;
         }
@@ -210,7 +210,7 @@ margin-bottom: 30px;
 .photo-block{
     display: flex;
     @media screen and(max-width: 767px){
-        // justify-content: center;
+      
         align-items: center;
         flex-wrap: wrap;
     }
@@ -220,6 +220,7 @@ margin-bottom: 30px;
 }
 
 .add-photo{
+    cursor: pointer;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -230,9 +231,9 @@ margin-bottom: 30px;
      @media screen and(max-width: 767px){
         width: 77px;
         height: 45px;
-        // flex-basis: 33.33%;
+        
         margin: 0.2em;
-        // justify-content: flex-start;
+       
     }
 
     @media screen and(min-width: $tablet) and (max-width: 1199px){
@@ -269,8 +270,7 @@ font-style: normal;
 font-weight: normal;
 font-size: 22px;
 line-height: 26px;
-// display: flex;
-// align-items: center;
+
 text-align: center;
 letter-spacing: 0.02em;
 color: $input-color
@@ -313,14 +313,14 @@ color: $input-color
         @media screen and(min-width: $tablet) and (max-width: 1199px){
             width: 266px;
             height: 60px;
-            // margin-top: 21px;
+           
             
         }
         
         @media screen and(min-width: $desktop){
             width: 210px;
             height: 60px;
-            // margin-top: 21px;
+           
             
            
         }

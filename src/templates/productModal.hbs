@@ -1,12 +1,15 @@
 <div class="">
     <div class="backdrop {{!-- is-hidden --}}" data-modal_product>
         <div class="modal-product-card" id="modal_product" data-product>
-            <div class="modal-product-content">
+            {{!-- <div class="modal-product-content"> --}}
+            <div class="product-content-block">
                 <h3 class="modal_title">Футболка спортивна</h3>
                 <p class="modal_text">Код товару | 105-C</p>
-                <div class="product_slider">
-                    <img src="../images/Rectangle12.jpg" alt="" width="253px" height="253px">
-                </div>
+            </div>
+            <div class="product_slider">
+                <img src="" alt="" width="" height="">
+            </div>
+            <div class="product-content-blocktwo">
                 <p class="product_price">200 грн.</p>
                 <div class="dealler_infornation" data-dealler_infornation> Інформація <br> про продавця</div>
                 <span class="product_link_box">
@@ -31,13 +34,16 @@
                 <p class="modal_text">Опис</p>
                 <p class="modal_text text_color">Все,що Ви тут читаєте є неважливим</p>
 
-                <button class="close_modal_product" data-modal-close>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
-                            fill="black" />
-                    </svg></button>
             </div>
+
+
+            <button class="close_modal_product" data-modal-close>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                        fill="black" />
+                </svg></button>
+            {{!-- </div> --}}
         </div>
     </div>
 </div>

@@ -5,7 +5,7 @@ const openModalProduct = document.querySelector('[data-modal_product]');
 const closeModal = document.querySelector('[close_modal_product]');
 
 modalProductContainer.addEventListener('click', openModalFunc);
-closeModal.addEventListener('click', closeModalProduct);
+/* closeModal.addEventListener('click', closeModalProduct); */
 
 
 function openModalFunc() {

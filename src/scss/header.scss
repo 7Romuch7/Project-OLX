@@ -77,18 +77,21 @@
 }
 
 .modal_menu {
-    @media screen and (max-width: 1199px) {
-        
         position: absolute;
         top: 0;
         left: 0;
-
         padding-top: 70px;
-        width: 305px;
         height: 1024px;
-
         background-color: $menu-color;
+
+    @media screen and (max-width: 767px) {
+        width: 305px;
     }
+
+    @media screen and (min-width: $tablet) {
+        width: 338px;
+    }
+
      @media screen and (min-width: $desktop) {
         display: none;
     }
@@ -191,6 +194,7 @@
         outline: none;
         border: none;
         background-color: $body-color;
+
     @media screen and (max-width: 767px) {
         display: none;
     }
@@ -208,7 +212,7 @@
 
 .user__profile-menu {
     width: 100%;
-    padding: 27px 0 26px 34px;
+    padding: 27px 0 70px 34px;
     border-bottom: 1px solid $border-color;
     @media screen and (min-width: $desktop) {
         display: none;
@@ -219,7 +223,6 @@
     position: absolute;
     border: none;
     outline: none;
-    background-color: $white-color;
     background-color: $body-color;
 
     @media screen and (max-width: 767px) {
@@ -275,4 +278,58 @@
 
 .replay {
     margin-right: 14px;
+}
+.dropdown {
+    width: 100%;
+    position: absolute;
+    top: 98px;
+    left: 100px;
+}
+
+.dropbtn {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: $basic-font;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: $black-color;
+    border: none;
+    outline: none;
+    background-color: $menu-color;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+
+    .link_office + .link_office {
+        padding-top: 20px;
+    }
+}
+
+.link_office {
+    font-family: $basic-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: $black-color;
+}
+
+.vector_office {
+    margin-left: 10px;
+}
+
+.logout {
+    position: absolute;
+    top: 97px;
+    right: 20px;
 }

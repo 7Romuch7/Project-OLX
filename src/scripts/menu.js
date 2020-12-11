@@ -1,14 +1,24 @@
-(() => {
-    const menuBtnRef = document.querySelector("[data-menu-button]");
-    const mobileMenuRef = document.querySelector("[data-menu]");
+const backdrop = document.querySelector('.backdrop');
+const modal = document.querySelector('.modal_menu');
+const openModalButton = document.querySelector('.menu-button');
+const closeModalButton = document.querySelector('.close-button');
 
-    menuBtnRef.addEventListener("click", () => {
-        const expanded =
-            menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+openModalButton.addEventListener('click', onModalMenu);
+closeModalButton.addEventListener('click', closeModalMenu);
+
+function onModalMenu(event) {
+    window.addEventListener('keydown', onEscKeydown);
+    event.preventDefault();
+    
+        backdrop.style.display = "block"; 
+}
+
+function closeModalMenu() {
+    backdrop.style.display = "none";
+}
   
-        menuBtnRef.classList.toggle("is-open");
-        menuBtnRef.setAttribute("aria-expanded", !expanded);
-
-        mobileMenuRef.classList.toggle("is-open");
-    });
-  })();
+function onEscKeydown(event) {
+    if (event.code === 'Escape') {
+       closeModalMenu()
+    }
+}

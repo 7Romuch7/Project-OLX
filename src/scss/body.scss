@@ -1,5 +1,5 @@
 .body {
-    background-color: #E5E5E5;
+    background-color: $body-color;
 }
 
 .container {
@@ -8,16 +8,4 @@
     padding-right: 20px;
     margin-right: auto;
     margin-left: auto;
-
-  @media screen and (min-width: $mobile) {
-    width: 320px;
-  }
-
-  @media screen and (min-width: $tablet) {
-    width: 768px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: 1200px;
-  }
 }

@@ -13,6 +13,9 @@ console.log(refs.openAddModalButtonEl);
 
 refs.openAddModalButtonEl.addEventListener('click', openAddModalHandler);
 refs.closeAddModalButtonEl.addEventListener('click', closeAddModalHandler);
+refs.addModalBackdropEl.addEventListener('click' , closeModalOnBackdropHandler) ;
+document.addEventListener('keydown', escClose);
+
 
 function openAddModalHandler(event){
     refs.addModalBackdropEl.classList.toggle('is-hidden');
@@ -20,4 +23,24 @@ function openAddModalHandler(event){
 
 function closeAddModalHandler(event){
     refs.addModalBackdropEl.classList.add('is-hidden');
+}
+
+function escClose(event){
+    const keyCodeValue = event.keyCode;
+     if(keyCodeValue === 27){
+         refs.addModalBackdropEl.classList.add('is-hidden')
+     }
+      
+}
+
+function  closeModalOnBackdropHandler(event){
+    const clisckValue = event.target;
+
+    if(clisckValue === refs.addModalBackdropEl){
+        refs.addModalBackdropEl.classList.add('is-hidden');
+        
+    }else{
+        return
+    }
+    console.log(clisckValue);
 }

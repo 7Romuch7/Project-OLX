@@ -1,0 +1,121 @@
+/*backdrop*/
+.search-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  overflow-y: scroll;
+
+  padding-top: 93px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  // @media screen and (min-width: $tablet) {
+  //   padding-top: 93px;
+  //   padding-left: 15px;
+  //   padding-right: 15px;
+  // }
+}
+/*modal*/
+.search-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  //   z-index: 999;
+
+  min-height: 152px;
+  min-width: 290px;
+  overflow: auto;
+  background-color: #ff6b09;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px #000000;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $tablet) {
+    min-height: 230px;
+    min-width: 860px;
+  }
+  @media screen and (min-width: $desktop) {
+    min-height: 230px;
+    min-width: 650px;
+  }
+  /*close*/
+  .close-search-modal-button {
+    position: absolute;
+    transform: translate(-20px, 25px);
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+
+    border: 0px;
+    background-color: transparent;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    // &:hover {
+    //   fill: $black-color;
+    // }
+  }
+
+  /*input*/
+  .search-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    resize: horizontal;
+
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 251px;
+    height: 43px;
+
+    border-bottom: 1px solid$black-color;
+
+    // @media screen and (min-width: $tablet) {
+    //   width: 550px;
+    // }
+    // @media screen and (min-width: $desktop) {
+    //   width: 650px;
+    // }
+  }
+  .search-input {
+    background-color: $btn-color;
+    border: 0px;
+    color: white;
+  }
+  .search-input::placeholder {
+    font-size: 18px;
+    color: $white-color;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+  .search-btn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+}

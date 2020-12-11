@@ -12,8 +12,3 @@ function buildAddModalTempl(){
 
 buildAddModalTempl()
 
-
-
-
-
-

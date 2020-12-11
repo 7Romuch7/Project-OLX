@@ -1,9 +1,6 @@
-  
 import './styles.scss';
 import './scripts/headers.js';
-import './scripts/footer';
-/* import './scripts/add-modal'; */
+import './scripts/footer.js';
+import './scripts/add-modal.js';
 import './scripts/menu.js';
-import './scripts/addProductModal.js';
-
-
+import './scripts/reg-modal.js';

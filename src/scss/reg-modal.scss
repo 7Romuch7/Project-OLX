@@ -1,26 +1,66 @@
-.is-hidden {
-  display: none;
-}
-
-.backdrop-overlay {
-  position: relative;
-  z-index: 999;
-
-  background-color: rgba(0, 0, 0, 0.7);
-
+// .registration-modal {
+//   position: absolute;
+//   // top: 0;
+//   // left: 0;
+//   // transform: translate(50%, 50%);
+//   opacity: 0;
+// }
+.lightbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
+  display: none;
+
+  // pointer-events: none;
 }
 
-.modal-registration {
+.lightbox__overlay {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.is-open {
+  display: block;
+}
+.lightbox__content {
+  position: absolute;
+}
+
+// .backdrop-overlay {
+//   position: relative;
+//   z-index: 5;
+
+//   background-color: rgba(0, 0, 0, 0.7);
+
+//   width: 100vw;
+//   height: 100vh;
+// }
+
+.modal-registration {
+  // position: absolute;
+  max-width: 260px;
+
+  // z-index: 10;
+  // top: 0;
+  // left: 0;
 
   display: flex;
   flex-direction: column;
 
-  transform: translate(50%, 50%);
+  // transform: translate(50%, 50%);
 
   background-color: #f5f6fb;
 
@@ -28,10 +68,11 @@
 
   @media screen and (min-width: 768px) {
     padding: 67px 103px;
+    max-width: 640px;
   }
 }
 
-.close-button {
+.close-reg-button {
   position: absolute;
   top: 20px;
   right: 20px;

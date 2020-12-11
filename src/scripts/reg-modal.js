@@ -1,21 +1,29 @@
 import regModal from '../templates/reg-modal.hbs'
 
-const regModalRef = document.querySelector('.registration-modal')
-const openModalBtn = document.querySelector('.open-modal')
-const closeModalBtn = document.querySelector('.close-button')
+
+
+const regModalRef = document.querySelector('.lightbox__content')
+const openModalBtn = document.querySelector('.login__btn')
+const modalEl = document.querySelector('.js-lightbox')
+const closeModalBtn = document.querySelector('.close-reg-button')
+
 
 openModalBtn.addEventListener('click', openModal)
-closeModalBtn.addEventListener('click', closeModal)
 
-function openModal() {
-    regModalRef.classList.remove('is-hidden')
+
+function openModal(evt) {
+    evt.preventDefault()
+    modalEl.classList.add('is-open')
     modalRender()
 }
-function closeModal() {
-   regModalRef.classList.add('is-hidden') 
-}
+
+closeModalBtn.addEventListener('click', () => {
+    modalEl.classList.remove('is-open')
+     regModalRef.innerHTML = ''
+    
+})
 
 function modalRender() {
-    regModalRef.insertAdjacentHTML('afterbegin', regModal())
+    // regModalRef.insertAdjacentHTML('beforeend', regModal())
+    regModalRef.innerHTML = regModal()
 }
-console.log(closeModalBtn)

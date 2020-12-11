@@ -9,7 +9,7 @@ const closeModalBtn = document.querySelector('.close-reg-button')
 
 
 openModalBtn.addEventListener('click', openModal)
-
+closeModalBtn.addEventListener('click', closeModal)
 
 function openModal(evt) {
     evt.preventDefault()
@@ -17,13 +17,13 @@ function openModal(evt) {
     modalRender()
 }
 
-closeModalBtn.addEventListener('click', () => {
+function closeModal() {
+    window.addEventListener('keydown', onEscKeydown);
     modalEl.classList.remove('is-open')
      regModalRef.innerHTML = ''
-    
-})
+}
+
 
 function modalRender() {
-    // regModalRef.insertAdjacentHTML('beforeend', regModal())
     regModalRef.innerHTML = regModal()
 }

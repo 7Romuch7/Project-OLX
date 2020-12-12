@@ -1,9 +1,5 @@
-.is-hidden{
-    display: none ;
-}
-
-.add-modal__backdrop{
-    //display: none;
+.redact-modal__backdrop{
+    // display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,7 +9,7 @@
     overflow-y: scroll;
 }
 
-.add-modal__block{
+.redact-modal__block{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,26 +17,28 @@
 
     @media screen and(max-width: 767px){
         width: 290px;
+        height: 930px;
         
     }
 
     @media screen and(min-width: $tablet) and (max-width: 1199px){
         width: 724px;
-        max-height: 698px;
+        height: 730px;
     }
     
     @media screen and(min-width: $desktop){
         width: 861px;
+        height: 730px;
         
        
     }
 
 
-    outline: 2px solid royalblue;
+    
     background-color: $white-color;
 }
 
-.add-modal__form{
+.redact-modal__form{
     @media screen and(max-width: 767px){
         margin-right: 19px;
         margin-left: 19px;
@@ -65,7 +63,7 @@
   
 }
 
-.add-modal__close-button{
+.redact-modal__close-button{
     position: absolute;
     top: 25px;
     right: 24px;
@@ -79,7 +77,7 @@
 }
 
 
-.add-modal__title{
+.redact-modal__title{
     font-family: $basic-font;
 font-style: normal;
 font-weight: 500;
@@ -89,9 +87,13 @@ letter-spacing: 0.02em;
 
 margin-top: 54px;
 margin-bottom: 30px;
+@media screen and(max-width: 767px){
+    margin-bottom: 20px;
+}
 }
 
-.modal__form-block{
+.redact-modal__form-block{
+    
 
    margin-bottom: 20px;
   
@@ -161,7 +163,7 @@ margin-bottom: 30px;
      }
 
 
-    .form-label{
+    .redact__form-label{
         font-family: $basic-font;
     font-style: normal;
     font-weight: 500;
@@ -208,11 +210,14 @@ margin-bottom: 30px;
         
     }
 }
+.form-block-tel{
+    position: relative;
+}
 
-.modal__photo-block{
+.redact-modal__photo-block{
   display: flex;
 }
-.photo-block{
+.redact__photo-block{
     display: flex;
     @media screen and(max-width: 767px){
       
@@ -224,7 +229,7 @@ margin-bottom: 30px;
     
 }
 
-.add-photo{
+.redact__add-photo{
     cursor: pointer;
      display: flex;
      justify-content: center;
@@ -269,7 +274,7 @@ margin-bottom: 30px;
 
 
 
-    .add-photo__plus{
+    .redact__add-photo__plus{
         font-family: $basic-font;
 font-style: normal;
 font-weight: normal;
@@ -282,18 +287,100 @@ color: $input-color
     }
 }
 
+.position-delete-button-block{
+    .delete-button-block{
+        position: relative;
+    }
+
+    margin-bottom: 54px;
+    @media screen and(max-width: 767px){
+        margin-bottom: 44px;;
+        }
 
 
 
 
-.modal__button-block{
+}
+
+
+
+
+
+.delete-button{
+position: absolute;
+
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
-    .add-button{
+    width: 163px;
+    height: 14px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+/* identical to box height */
+
+    letter-spacing: 0.07em;
+
+    border: none;
+    background-color: $white-color;
+
+    @media screen and(max-width: 767px){
+                       left: 0em;
+         
+     }
+ 
+     @media screen and(min-width: $tablet) and (max-width: 1199px){
+         
+               left: 13em;
+        
+         
+     }
+     
+     @media screen and(min-width: $desktop){
+         
+               left: 17.5em;
+        
+         
+        
+     }
+}
+
+
+
+
+
+.redact-modal__button-block{
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and(max-width: 767px){
+       justify-content: center;
+        
+    }
+
+    @media screen and(min-width: $tablet) and (max-width: 1199px){
+        
+        margin-right: 72px;
+       
+        
+    }
+    
+    @media screen and(min-width: $desktop){
+        
+        margin-right: 105px;
+       
+        
+       
+    }
+
+    .redact__save-button{
         width: 210px;
         height: 60px;
-        margin: 21px;
+        // margin-top: 21px;
         background-color: $btn-color;
         border: none;
 
@@ -309,14 +396,59 @@ color: $input-color
           color: #FFFFFF;
 
           @media screen and(max-width: 767px){
-            width: 251px;
+            width: 118.6px;
+            height: 50px;
+            margin-right: 15px;
+            // margin-top: 10px;
+            
+        }
+    
+        @media screen and(min-width: $tablet) and (max-width: 1199px){
+            width: 210px;
+            height: 60px;
+            margin-right: 20px;
+           
+            
+        }
+        
+        @media screen and(min-width: $desktop){
+            width: 210px;
+            height: 60px;
+            margin-right: 20px;
+           
+            
+           
+        }
+
+    }
+
+    .redact__cancel-button{
+        width: 210px;
+        height: 60px;
+        // margin-top: 21px;
+        background-color: $white-color;
+        border: 1px solid #BBBBBB;
+
+        font-family: $basic-font;
+        font-style: normal;
+         font-weight: 500;
+         font-size: 12px;
+         line-height: 14px;
+         text-align: center;
+         letter-spacing: 0.02em;
+         text-transform: uppercase;
+
+          color: $black-color;
+
+          @media screen and(max-width: 767px){
+            width: 118.6px;
             height: 50px;
             // margin-top: 10px;
             
         }
     
         @media screen and(min-width: $tablet) and (max-width: 1199px){
-            width: 266px;
+            width: 210px;
             height: 60px;
            
             

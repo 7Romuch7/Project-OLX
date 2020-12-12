@@ -4,7 +4,7 @@ import './scripts/footer.js';
 import './scripts/add-modal.js';
 import './scripts/menu.js';
 import './scripts/reg-modal.js';
-import './scripts/searchModal.js';
 import './scripts/add-modal-open-close';
+import './scripts/searchModal.js';
 import './scripts/searchModalRender.js';
 

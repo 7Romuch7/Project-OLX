@@ -72,6 +72,8 @@
     background-color: $white-color;
     border: none;
 
+    cursor: pointer;
+
     @media screen and(max-width: 767px){
         top: 15px;
         right: 14px;
@@ -151,14 +153,45 @@ margin-bottom: 30px;
             
            
         }
+
        
       
         
-        
-        
-
-
      }
+
+
+     select{
+        box-sizing: border-box;
+
+        height: 56px;
+        padding-right: 23px;
+        padding-left: 23px;
+
+        border: 1px solid $input-color;
+        font-size: 100%;
+        color: $input-color;
+       
+
+       @media screen and(max-width: 767px){
+           width: 251px;
+           
+       }
+   
+       @media screen and(min-width: $tablet) and (max-width: 1199px){
+           width: 458px;
+           
+       }
+       
+       @media screen and(min-width: $desktop){
+           width: 440px;
+           
+          
+       }
+
+      
+     
+       
+    }
 
 
     .form-label{
@@ -307,6 +340,8 @@ color: $input-color
          text-transform: uppercase;
 
           color: #FFFFFF;
+
+          cursor: pointer;
 
           @media screen and(max-width: 767px){
             width: 251px;

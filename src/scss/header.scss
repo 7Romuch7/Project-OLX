@@ -50,7 +50,15 @@
 
 .btn {
   @media screen and (max-width: 767px) {
-    display: none;
+    position: absolute;
+    top: 501px;
+    right: 17px;
+    padding: 15px;
+    background-color: $btn-color;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    
   }
 
   @media screen and (min-width: $tablet) {
@@ -70,6 +78,18 @@
   }
   @media screen and (min-width: $tablet) {
     margin-left: 19px;
+  }
+}
+
+.text_btn {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.plus {
+   @media screen and (min-width: $tablet) {
+    display: none;
   }
 }
 

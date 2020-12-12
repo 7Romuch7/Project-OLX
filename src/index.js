@@ -1,5 +1,5 @@
 import './styles.scss';
-import './scripts/headers.js';
+import './scripts/header.js';
 import './scripts/footer.js';
 import './scripts/add-modal.js';
 import './scripts/redact-my-products-modal.js' ;

@@ -1,335 +1,331 @@
 .header {
-    position: relative;
+  position: relative;
 }
 
-.backdrop{
-    
-    @media screen and (max-width: 1199px) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: $backdrop-color;
-        overflow-y: scroll;
-        z-index: 2;
-    }
+.backdrop {
+  @media screen and (max-width: 1199px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $backdrop-color;
+    overflow-y: scroll;
+    z-index: 2;
+  }
 }
 
 .search-btn {
-        outline: none;
-        border: none;
-        background-color: $body-color;
-    @media screen and (max-width: 767px) {
-        position: absolute;
-        top: 28px;
-        right: 25px;
-    }
+  outline: none;
+  border: none;
+  background-color: $body-color;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 28px;
+    right: 25px;
+  }
 
-    @media screen and (min-width: $tablet) {
-        position: absolute;
-        top: 28px;
-        left: 24px;
-    }
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 28px;
+    left: 24px;
+  }
 }
 
 .logo {
-    position: absolute;
-    top: 30px;
-    right: 50%;
+  position: absolute;
+  top: 30px;
+  right: 50%;
 
-    font-family: $secondary-font;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
 
-    letter-spacing: 1.25;
-    text-transform: uppercase;
+  letter-spacing: 1.25;
+  text-transform: uppercase;
 
-    color: $black-color;
-
-    
+  color: $black-color;
 }
 
 .btn {
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
-    @media screen and (min-width: $tablet) {
-        width: 178px;
-        height: 70px;
-        background-color:$btn-color;
-        padding: 29px 15px;
-        font-family: $basic-font;
-        font-size: 10px;
-        font-weight: 500;
-        line-height: 12px;
-        letter-spacing: 1.2;
-        text-align: center;
-        text-transform: uppercase;
-        color: $white-color;
-        border: none;
-    }
-    @media screen and (min-width: $tablet) {
-        margin-left: 19px;
-    }
+  @media screen and (min-width: $tablet) {
+    width: 178px;
+    height: 70px;
+    background-color: $btn-color;
+    padding: 29px 15px;
+    font-family: $basic-font;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white-color;
+    border: none;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-left: 19px;
+  }
 }
 
 .modal_menu {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-top: 70px;
-        height: 1024px;
-        background-color: $menu-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 70px;
+  height: 1024px;
+  background-color: $menu-color;
 
-    @media screen and (max-width: 767px) {
-        width: 305px;
-    }
+  @media screen and (max-width: 767px) {
+    width: 305px;
+  }
 
-    @media screen and (min-width: $tablet) {
-        width: 338px;
-    }
+  @media screen and (min-width: $tablet) {
+    width: 338px;
+  }
 
-     @media screen and (min-width: $desktop) {
-        display: none;
-    }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .info__content {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: baseline;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
 }
 
 .header__nav-desktop {
-    @media screen and (min-width: $desktop) {
-        display: flex;
-        align-items: flex-start;
-        align-items: baseline;
-        border: 1px solid $border-color;
-        padding: 27px 0 26px 0px;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: flex-start;
+    align-items: baseline;
+    border: 1px solid $border-color;
+    padding: 27px 0 26px 0px;
 
-        .header__link + .header__link {
-            margin-left: 40px;
-        }
+    .header__link + .header__link {
+      margin-left: 40px;
     }
+  }
 
-    @media screen and (max-width: 1199px) {
-        display: none;
-    }
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .header__nav {
-    @media screen and (max-width: 1199px) {
-        display: flex;
-        align-items: flex-start;
-        align-items: baseline;
-        flex-direction: column;
-        border-top: 1px solid $border-color;
-        .header__link + .header__link {
-            border-top: 1px solid $border-color;
-            border-bottom: 1px solid $border-color; 
-        }
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    align-items: flex-start;
+    align-items: baseline;
+    flex-direction: column;
+    border-top: 1px solid $border-color;
+    .header__link + .header__link {
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
     }
+  }
 }
 
 .login__btn {
-    @media screen and (max-width: 1199px) {
-        position: absolute;
-        top: 102px;
-        left: 65px;
-        z-index: 2;
-        font-family: $basic-font;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 14px;
-        letter-spacing: 1.17;
-        color: $black-color;
-        text-decoration: none;
-        text-transform: uppercase;
-        outline: none;
-        border: none;
-        background-color: $menu-color;
-        
-    }
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    top: 102px;
+    left: 65px;
+    z-index: 2;
+    font-family: $basic-font;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 1.17;
+    color: $black-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    background-color: $menu-color;
+  }
 
-    @media screen and (min-width: $desktop) {
-        position: absolute;
-        top: 25px;
-        right: 230px;
-        font-family: $basic-font;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 14px;
-        letter-spacing: 1.17;
-        color: $black-color;
-        text-decoration: none;
-        margin-left: 229px;
-        text-transform: uppercase;
-        outline: none;
-        border: none;
-        background-color: $body-color;
-    }
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: 25px;
+    right: 230px;
+    font-family: $basic-font;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 1.17;
+    color: $black-color;
+    text-decoration: none;
+    margin-left: 229px;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    background-color: $body-color;
+  }
 }
 
 .header__link {
-    font-family: $basic-font;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 1.14;
-    color: $black-color;
-    text-decoration: none;
+  font-family: $basic-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1.14;
+  color: $black-color;
+  text-decoration: none;
 
-    @media screen and (max-width: 1199px) {
-        width: 100%;
-        padding: 27px 0 26px 34px;
-    }
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+    padding: 27px 0 26px 34px;
+  }
 }
 
 .user__profile-header {
-        outline: none;
-        border: none;
-        background-color: $body-color;
+  outline: none;
+  border: none;
+  background-color: $body-color;
 
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
-    @media screen and (max-width: $tablet) {
-        position: absolute;
-        top: 25px;
-        right: 28%;
-    }
+  @media screen and (max-width: $tablet) {
+    position: absolute;
+    top: 25px;
+    right: 28%;
+  }
 
-    @media screen and (min-width: $desktop) {
-        display: none;
-    }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .user__profile-menu {
-    width: 100%;
-    padding: 27px 0 70px 34px;
-    border-bottom: 1px solid $border-color;
-    @media screen and (min-width: $desktop) {
-        display: none;
-    }
+  width: 100%;
+  padding: 27px 0 70px 34px;
+  border-bottom: 1px solid $border-color;
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .menu-button {
-    position: absolute;
-    border: none;
-    outline: none;
-    background-color: $body-color;
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: $body-color;
 
-    @media screen and (max-width: 767px) {
-        top: 30px;
-        left: 30px;
-    }
+  @media screen and (max-width: 767px) {
+    top: 30px;
+    left: 30px;
+  }
 
-    @media screen and (min-width: $tablet) {
-        top: 100px;
-        left: 25px;
-    }
+  @media screen and (min-width: $tablet) {
+    top: 100px;
+    left: 25px;
+  }
 
-    @media screen and (min-width: $desktop) {
-        display: none;
-    }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .close-button {
-    position: absolute;
-    top: 30px;
-    right: 24px;
-    border: none;
-    outline: none;
-    background-color: $white-color;
-    @media screen and (min-width: $desktop) {
-        display: none;
-    }
+  position: absolute;
+  top: 30px;
+  right: 24px;
+  border: none;
+  outline: none;
+  background-color: $white-color;
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .filter {
-        display: flex;
-        align-items: center;
-        font-family: $secondary-font;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 15px;
-        letter-spacing: 1.25;
-        color: $black-color;
-        outline: none;
-        border: none;
-        background-color: $body-color;
+  display: flex;
+  align-items: center;
+  font-family: $secondary-font;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 1.25;
+  color: $black-color;
+  outline: none;
+  border: none;
+  background-color: $body-color;
 
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
-    @media screen and (min-width: $tablet) {
-        position: absolute;
-        top: 93px;
-        right: 42px;
-    }
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 93px;
+    right: 42px;
+  }
 }
 
 .replay {
-    margin-right: 14px;
+  margin-right: 14px;
 }
 .dropdown {
-    width: 100%;
-    position: absolute;
-    top: 98px;
-    left: 100px;
+  width: 100%;
+  position: absolute;
+  top: 98px;
+  left: 100px;
 }
 
 .dropbtn {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    font-family: $basic-font;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: $black-color;
-    border: none;
-    outline: none;
-    background-color: $menu-color;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-family: $basic-font;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: $black-color;
+  border: none;
+  outline: none;
+  background-color: $menu-color;
 }
 
 .dropdown-content {
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    flex-direction: column;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
 
-    .link_office + .link_office {
-        padding-top: 20px;
-    }
+  .link_office + .link_office {
+    padding-top: 20px;
+  }
 }
 
 .link_office {
-    font-family: $basic-font;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: $black-color;
+  font-family: $basic-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: $black-color;
 }
 
 .vector_office {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .logout {
-    position: absolute;
-    top: 97px;
-    right: 20px;
+  position: absolute;
+  top: 97px;
+  right: 20px;
 }

@@ -5,10 +5,6 @@ const closeSearchModalBtn = document.querySelector('#close-search-modal-button')
 
 openSearchModalBtn.addEventListener('click', openSearchModal);
 closeSearchModalBtn.addEventListener("click", closeSearchModal);
-// document.addEventListener('click', function(event) {
-//   var e=document.querySelector('.search-modal-backdrop');
-//   if (!e.contains(event.target)) closeSearchModal(evt);
-// });
 
 function openSearchModal(evt) {
     evt.preventDefault()
@@ -20,10 +16,5 @@ function closeSearchModal(evt) {
     backdrop.classList.add('is-hidden')
 }
     
-// function ESCclose(evt) {
-//      if (evt.keyCode == 27) {
-//        closeSearchModal(evt)
-//        console.log('close the window...')
-//      }
-// }
+
 

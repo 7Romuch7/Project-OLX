@@ -1,15 +1,29 @@
-import searchModalTempl from '../templates/searchModalTempl.hbs';
-console.log(searchModalTempl);
-const searchSection = document.querySelector('.search');
-const openSearchModalBtn = document.querySelector("[data-modal-open]");
-// const closeSearchModalBtn = document.querySelector("[data-modal-close]");
-const backdrop = document.querySelector("[data-backdrop]");
-// openSearchModalBtn.addEventListener("click", toggleSearchModal);
-// closeSearchModalBtn.addEventListener("click", closeSearchModal);
-function buildSearchModalTempl() {
-    searchSection.insertAdjacentHTML('afterbegin', searchModalTempl())
+
+const backdrop = document.querySelector('.search-modal-backdrop');
+const openSearchModalBtn = document.querySelector('#search-btn');
+const closeSearchModalBtn = document.querySelector('#close-search-modal-button');
+
+openSearchModalBtn.addEventListener('click', openSearchModal);
+closeSearchModalBtn.addEventListener("click", closeSearchModal);
+// document.addEventListener('click', function(event) {
+//   var e=document.querySelector('.search-modal-backdrop');
+//   if (!e.contains(event.target)) closeSearchModal(evt);
+// });
+
+function openSearchModal(evt) {
+    evt.preventDefault()
+    backdrop.classList.remove('is-hidden')
 }
-buildSearchModalTempl()
-function toggleSearchModal() {
-    backdrop.classList.toggle("is-hidden")
+   
+function closeSearchModal(evt) { 
+    evt.preventDefault()
+    backdrop.classList.add('is-hidden')
 }
+    
+// function ESCclose(evt) {
+//      if (evt.keyCode == 27) {
+//        closeSearchModal(evt)
+//        console.log('close the window...')
+//      }
+// }
+

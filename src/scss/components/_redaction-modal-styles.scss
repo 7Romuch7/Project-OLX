@@ -108,6 +108,7 @@ margin-bottom: 30px;
         }
     }
     @media screen and(min-width: $desktop){
+        position: relative;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -118,6 +119,7 @@ margin-bottom: 30px;
         }
     }
     @media screen and(min-width: $tablet) and (max-width: 1199px){
+        position: relative;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -310,6 +312,10 @@ margin-bottom: 30px;
 
 
     .redact__add-photo__plus{
+        z-index: 2;
+        display: block;
+        position: absolute;
+
         font-family: $basic-font;
 font-style: normal;
 font-weight: normal;
@@ -504,6 +510,25 @@ position: absolute;
         }
 
     }
+}
+
+
+.redact-modal-error{
+    @media screen and(min-width: $tablet) and (max-width: 1199px){
+         position: absolute;
+         top: 3.5em;
+       
+        
+    }
+    
+    @media screen and(min-width: $desktop){
+        position: absolute;
+         top: 3.5em;
+       
+        
+       
+    }
+
 }
 
 

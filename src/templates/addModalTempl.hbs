@@ -8,29 +8,44 @@
       </svg>
     </button>
 
-    <form action="" class="add-modal__form">
+    <form action="" id="add-form" class="add-modal__form">
       <h1 class="add-modal__title">
         Додати оголошення
       </h1>
-      <div class="modal__form-block">
-        <input type="text" name="product-name" id="product-name" placeholder=" ">
+      <div class="modal__form-block name-block">
+        <input type="text" class="required name-input" name="product-name" id="product-name" placeholder=" " >
         <label for="product-name" class="form-label">Назва товару</label>
       </div>
       <div class="modal__form-block modal__photo-block">
         <div class="photo-block" name="photo-block" id="photo-block">
           <div class="add-photo">
+            <div class="add-photo__image-block">
+              {{!-- <img src="" alt="" class="add-photo__photo-card" width="100%" height="100%"> --}}
+            </div>
             <p class="add-photo__plus">+</p>
           </div>
           <div class="add-photo">
+            <div class="add-photo__image-block">
+              {{!-- <img src="" alt="" class="add-photo__photo-card" width="100%" height="100%"> --}}
+            </div>
             <p class="add-photo__plus">+</p>
           </div>
           <div class="add-photo">
+             <div class="add-photo__image-block">
+              {{!-- <img src="" alt="" class="add-photo__photo-card" width="100%" height="100%"> --}}
+            </div>
             <p class="add-photo__plus">+</p>
           </div>
           <div class="add-photo">
+             <div class="add-photo__image-block">
+              {{!-- <img src="" alt="" class="add-photo__photo-card" width="100%" height="100%"> --}}
+            </div>
             <p class="add-photo__plus">+</p>
           </div>
           <div class="add-photo">
+             <div class="add-photo__image-block">
+              {{!-- <img src="" alt="" class="add-photo__photo-card" width="100%" height="100%"> --}}
+            </div>
             <p class="add-photo__plus">+</p>
           </div>
 
@@ -38,31 +53,37 @@
         <label for="photo-block" class="form-label">Фото</label>
       </div>
       <div class="modal__form-block">
-        <textarea name="product-description" id="product-description" cols="30" rows="10"></textarea>
+        <textarea class="required" name="product-description" id="product-description" cols="30" rows="10"></textarea>
         <label for="product-description" class="form-label">Опис товару</label>
       </div>
       <div class="modal__form-block">
-         <select name="product-category" id="product-category">
+         <select name="product-category" class="required" id="product-category">
            
          </select>
         {{!-- <input type="text" name="product-category" id="product-category"> --}}
         <label for="product-category" class="form-label">Категорія товару</label>
       </div>
       <div class="modal__form-block">
-        <input type="text" name="product-price" id="product-price" placeholder="0.00 грн">
+        <input type="text" class="required" name="product-price" id="product-price" placeholder="0.00грн">
         <label for="product-price" class="form-label">Ціна</label>
       </div>
       <div class="modal__form-block">
-        <input type="tel" name="tel-number" id="tel-number" placeholder="+38 (0--) --- -- --">
+        <input type="tel" class="required tel" name="tel-number" id="tel-number" placeholder="093 --- -- --">
         <label for="tel-number" class="form-label">Телефон</label>
       </div>
 
-    </form>
-    <div class="modal__button-block">
-      <button type="button" class="add-button" aria-label="add-button">
+      <div class="modal__button-block">
+      <button type="submit" class="add-button" aria-label="add-button">
         Додати
       </button>
     </div>
+
+    </form>
+    {{!-- <div class="modal__button-block">
+      <button type="submit" class="add-button" aria-label="add-button">
+        Додати
+      </button>
+    </div> --}}
 
   </div>
 </div>

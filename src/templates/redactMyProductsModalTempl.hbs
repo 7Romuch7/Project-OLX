@@ -1,4 +1,4 @@
-<div class="redact-modal__backdrop is-hidden" data-modal>
+<div class="redact-modal__backdrop is-hidden " data-modal>
   <div class="redact-modal__block">
     <button type="button" class="redact-modal__close-button">
       <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8,29 +8,44 @@
       </svg>
     </button>
 
-    <form action="" class="redact-modal__form">
+    <form action="" class="redact-modal__form" id="redact-form">
       <h1 class="redact-modal__title">
         Редагувати оголошення
       </h1>
       <div class="redact-modal__form-block">
-        <input type="text" name="product-name" id="product-name" placeholder=" ">
+        <input class="req redact-name-input" type="text" name="product-name" id="product-name" placeholder=" ">
         <label for="product-name" class="redact__form-label">Назва товару</label>
       </div>
       <div class="redact-modal__form-block redact-modal__photo-block">
         <div class="redact__photo-block" name="photo-block" id="photo-block">
           <div class="redact__add-photo">
+             <div class="redact__add-photo__image-block">
+              {{!-- <img src="" alt="" class="redact__add-photo__photo-card" width="100%" height="100%"> --}}
+            </div>
             <p class="redact__add-photo__plus">+</p>
           </div>
           <div class="redact__add-photo">
+             <div class="redact__add-photo__image-block">
+              {{!-- <img src="" alt="" class="redact__add-photo__photo-card" width="100%" height="100%"> --}}
+            </div>
             <p class="redact__add-photo__plus">+</p>
           </div>
           <div class="redact__add-photo">
+             <div class="redact__add-photo__image-block">
+              {{!-- <img src="" alt="" class="redact__add-photo__photo-card" width="100%" height="100%"> --}}
+            </div>
             <p class="redact__add-photo__plus">+</p>
           </div>
           <div class="redact__add-photo">
+             <div class="redact__add-photo__image-block">
+              {{!-- <img src="" alt="" class="redact__add-photo__photo-card" width="100%" height="100%"> --}}
+            </div>
             <p class="redact__add-photo__plus">+</p>
           </div>
           <div class="redact__add-photo">
+             <div class="redact__add-photo__image-block">
+              {{!-- <img src="" alt="" class="redact__add-photo__photo-card" width="100%" height="100%"> --}}
+            </div>
             <p class="redact__add-photo__plus">+</p>
           </div>
 
@@ -38,23 +53,23 @@
         <label for="photo-block" class="redact__form-label">Фото</label>
       </div>
       <div class="redact-modal__form-block">
-        <textarea name="product-description" id="product-description" cols="30" rows="10"></textarea>
+        <textarea class="req" name="product-description" id="product-description" cols="30" rows="10"></textarea>
         <label for="product-description" class="redact__form-label">Опис товару</label>
       </div>
       <div class="redact-modal__form-block">
-         <select name="product-category" id="product-category">
+         <select class="req" name="product-category" id="product-category">
            
            
          </select>
         {{!-- <input type="text" name="product-category" id="product-category"> --}}
-        <label for="product-category" class="redact__form-label">Категорія товару</label>
+        <label for="product-category" class="redact__form-label ">Категорія товару</label>
       </div>
       <div class="redact-modal__form-block">
-        <input type="text" name="product-price" id="product-price" placeholder="">
+        <input class="req" type="text" name="product-price" id="product-price" placeholder="0.00грн">
         <label for="product-price" class="redact__form-label">Ціна</label>
       </div>
       <div class="redact-modal__form-block  form-block-tel">
-        <input type="tel" name="tel-number" id="tel-number" placeholder="">
+        <input class="req" type="tel" name="tel-number" id="tel-number" placeholder="093 --- -- --">
         <label for="tel-number" class="redact__form-label">Телефон</label>
         
       </div>
@@ -70,8 +85,19 @@
        </div>
        </div>
 
+
+       <div class="redact-modal__button-block">
+     
+      <button type="submit" class="redact__save-button" aria-label="add-button">
+        зберегти
+      </button>
+      <button type="button" class="redact__cancel-button" aria-label="add-button">
+        відміна
+      </button>
+    </div>
+
     </form>
-    <div class="redact-modal__button-block">
+    {{!-- <div class="redact-modal__button-block">
      
       <button type="button" class="redact__save-button" aria-label="add-button">
         зберегти
@@ -79,7 +105,7 @@
       <button type="button" class="redact__cancel-button" aria-label="add-button">
         відміна
       </button>
-    </div>
+    </div> --}}
 
   </div>
 </div>

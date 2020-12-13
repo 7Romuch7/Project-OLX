@@ -9,4 +9,5 @@ import './scripts/add-modal-open-close.js';
 import './scripts/searchModalRender.js';
 import './scripts/searchModal.js';
 import './scripts/addProductModal.js';
+import './scripts/product-slider.js';
 

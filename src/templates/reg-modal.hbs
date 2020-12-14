@@ -37,11 +37,11 @@
 
         <span class="modal-reg-text">Google</span></button>
     <span class="modal-reg-text">Або зайти за допомогою імейлу і пароля, попередньо зареєструвавшись:</span>
-    <form class="reg-form">
-        <input class="email-input" type="email" placeholder="E-mail">
+    <form class="reg-form" id="form_id" action="" onsubmit="javascript:return validate('form_id','email');">
+        <input class="email-input" type="text" id="email" name="email" placeholder="E-mail">
         <input class="password-input" type="password" placeholder="Password">
         <div class="reg-form-btns">
-            <button class="auth-btns entry-btn">Увійти</button>
+            <button class="auth-btns entry-btn" type="submit" value="Submit">Увійти</button>
             <button class="auth-btns reg-btn">Зареєструватись</button>
         </div>
     </form>

@@ -139,7 +139,7 @@
   }
 }
 
-.header__nav, .menu__links-office, .menu__links-registration {
+.header__nav, .menu__links-office {
   @media screen and (max-width: 1199px) {
     width: 100%;
     display: flex;
@@ -154,23 +154,15 @@
   }
 }
 
-.menu__links-office {
+.office {
   @media screen and (max-width: 1199px) {
     padding-top: 120px;
   }
 }
 
-.menu__links-registration{
-  @media screen and (max-width: 1199px) {
-    padding-top: 100px;
-  }
-}
-
 .login__btn {
   @media screen and (max-width: 1199px) {
-    position: absolute;
-    top: 102px;
-    left: 65px;
+    padding: 27px 0 26px 0;
     z-index: 2;
     font-family: $basic-font;
     font-size: 12px;
@@ -240,18 +232,22 @@
 }
 
 .user__profile-menu {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding: 27px 0 70px 34px;
-  border-bottom: 1px solid $border-color;
   @media screen and (min-width: $desktop) {
     display: none;
   }
 }
 
+.user_office {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 27px 0 70px 34px;
+  border-bottom: 1px solid $border-color;
+}
+
 .entrance {
-  padding: 27px 0 40px 34px;
+  padding-left: 34px;
+  margin-right: 14px;
 }
 
 .menu-button {

@@ -13,7 +13,7 @@ console.log(refs.openAddModalButtonEl);
 
 refs.openAddModalButtonEl.addEventListener('click', openAddModalHandler);
 refs.closeAddModalButtonEl.addEventListener('click', closeAddModalHandler);
-refs.addModalBackdropEl.addEventListener('click', closeModalOnBackdropHandler) ;
+refs.addModalBackdropEl.addEventListener('click', closeModalOnBackdropHandler);
 document.addEventListener('keydown', escClose);
 
 function openAddModalHandler(event){

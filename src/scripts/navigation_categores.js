@@ -27,10 +27,12 @@ let getCategories = async () => {
 }
 
 let menuRef = document.querySelector('.menu__links');
+let menuMobile = document.querySelector('.menu__links-office');
 
 let addMarkup = ( categories ) => {
     let markup = categories.map( category => `<a href="#" data-category="${category}" class="header__link"${category}">${translationOfWords[category]}</a>`)
-    menuRef.innerHTML = markup.join(' ')
+  menuRef.innerHTML = markup.join(' ')
+  menuMobile.innerHTML = markup.join(' ')
 }
 
 menuRef.addEventListener('click', (e) => {
@@ -38,6 +40,13 @@ menuRef.addEventListener('click', (e) => {
     let category = e.target.getAttribute('data-category');
     getCategory ( category );
 })
+
+menuMobile.addEventListener('click', (e) => {
+    e.preventDefault();
+    let category = e.target.getAttribute('data-category');
+    getCategory ( category );
+})
+
 
 let start = async () => {
   let categories = await getCategories();

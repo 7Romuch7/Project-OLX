@@ -10,6 +10,7 @@ import './scripts/navigation_categores.js';
 import './scripts/add-modal-open-close.js';
 import './scripts/add-modal-validate.js' ;
 import './scripts/redact-modal-validation.js' ;
+import './scripts/get-categories-for-add.js'
 
 import './scripts/searchModalRender.js';
 import './scripts/searchModal.js';

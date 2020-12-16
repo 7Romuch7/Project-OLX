@@ -3,10 +3,10 @@
 const redactForm = document.querySelector('#redact-form');
 const validateBtn = redactForm.querySelector('.redact__save-button');
 const nameProduct = redactForm.querySelector('.redact-name-input');
-const descriptionProduct = redactForm.querySelector('#product-description');
-const selectProduct = redactForm.querySelector('#product-category');
-const productPrice = redactForm.querySelector('#product-price');
-const tel = redactForm.querySelector('#tel-number');
+const descriptionProduct = redactForm.querySelector('#redact-product-description');
+const selectProduct = redactForm.querySelector('#redact-product-category');
+const productPrice = redactForm.querySelector('#redact-product-price');
+const tel = redactForm.querySelector('#redact-tel-number');
 const requiredFields = redactForm.querySelectorAll('.req');
 
 

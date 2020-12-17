@@ -13,15 +13,21 @@
         Додати оголошення
       </h1>
       <div class="modal__form-block name-block">
-        <input type="text" class="required name-input" name="product-name" id="product-name" placeholder=" " >
+        <input type="text" class="required name-input" name="product-name" id="product-name" placeholder=" ">
         <label for="product-name" class="form-label">Назва товару</label>
       </div>
-
-
       <div class="modal__form-block modal__photo-block">
-
         <div class="photo-block" name="photo-block" id="photo-block">
 
+          <div class="add-photo">
+            <div class="add-photo__image-block">
+              <input type="file" accept="image/*" name="photo-file" id="photo-file" class="add-photo-file">
+              <label for="photo-file">
+                <span class="input-file__button-text">+</span>
+              </label>
+            </div>
+
+          </div>
 
           <div class="add-photo">
             <div class="add-photo__image-block">
@@ -29,20 +35,8 @@
               <label for="photo-file">
                 <span class="input-file__button-text">+</span>
               </label>
-              
             </div>
-            
-          </div>
-          
-         <div class="add-photo">
-            <div class="add-photo__image-block">
-              <input type="file" accept="image/*" name="photo-file" id="photo-file" class="add-photo-file">
-              <label for="photo-file">
-                <span class="input-file__button-text">+</span>
-              </label>
-              
-            </div>
-            
+
           </div>
           <div class="add-photo">
             <div class="add-photo__image-block">
@@ -50,9 +44,8 @@
               <label for="photo-file">
                 <span class="input-file__button-text">+</span>
               </label>
-              
             </div>
-            
+
           </div>
           <div class="add-photo">
             <div class="add-photo__image-block">
@@ -60,19 +53,16 @@
               <label for="photo-file">
                 <span class="input-file__button-text">+</span>
               </label>
-              
             </div>
-            
           </div>
+
           <div class="add-photo">
             <div class="add-photo__image-block">
               <input type="file" accept="image/*" name="photo-file" id="photo-file" class="add-photo-file">
               <label for="photo-file">
                 <span class="input-file__button-text">+</span>
               </label>
-              
             </div>
-            
           </div>
 
         </div>
@@ -83,10 +73,9 @@
         <label for="product-description" class="form-label">Опис товару</label>
       </div>
       <div class="modal__form-block">
-         <select name="product-category" class="required" id="product-category">
-         
-           
-         </select>
+        <select name="product-category" class="required" id="product-category">
+
+        </select>
         {{!-- <input type="text" name="product-category" id="product-category"> --}}
         <label for="product-category" class="form-label">Категорія товару</label>
       </div>
@@ -100,10 +89,10 @@
       </div>
 
       <div class="modal__button-block">
-      <button type="submit" class="add-button" aria-label="add-button">
-        Додати
-      </button>
-    </div>
+        <button type="submit" class="add-button" aria-label="add-button">
+          Додати
+        </button>
+      </div>
 
     </form>
     {{!-- <div class="modal__button-block">

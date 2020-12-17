@@ -1,13 +1,8 @@
-import regModal from '../templates/reg-modal.hbs'
-
-
-
-const regModalRef = document.querySelector('.lightbox__content')
-modalRender()
 const openModalBtn = document.querySelector('.login__btn')
 const openUserProfile = document.querySelector('.user__profile-header')
 const modalEl = document.querySelector('.js-lightbox')
 const closeModalBtn = document.querySelector('.close-reg-button')
+const regModalRef = document.querySelector('.lightbox__content')
 const entryBtnRef = document.querySelector('.entry-btn')
 const emailInput = document.querySelector('.email-input')
 // const passwordInputRef = document.querySelector('.password-input')
@@ -18,23 +13,18 @@ openUserProfile.addEventListener('click', openModal)
 closeModalBtn.addEventListener('click', closeModal)
 entryBtnRef.addEventListener('click', validate)
 googleAuthRef.addEventListener('click', onsingIn)
+
 function openModal(evt) {
-    
-    evt.preventDefault()
+  
+  evt.preventDefault()
   modalEl.classList.add('is-open')
   init()
 }
 
 function closeModal() {
-    
-    modalEl.classList.remove('is-open')
-     regModalRef.innerHTML = ''
+  modalEl.classList.remove('is-open')  
 }
 
-
-function modalRender() {
-    regModalRef.innerHTML = regModal()
-}
 
 // валидация имейла(просто но со вкусом))
 function validate(evt) {
@@ -80,4 +70,4 @@ function onSignOut() {
 // BasicProfile.getGivenName()
 // BasicProfile.getFamilyName()
 // BasicProfile.getImageUrl()
-// BasicProfile.getEmail()
+// BasicProfile.getEmail() */

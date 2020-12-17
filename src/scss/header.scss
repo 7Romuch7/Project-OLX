@@ -19,6 +19,8 @@
   outline: none;
   border: none;
   background-color: $body-color;
+  cursor: pointer;
+
   @media screen and (max-width: 767px) {
     position: absolute;
     top: 28px;
@@ -49,6 +51,8 @@
 }
 
 .btn {
+  cursor: pointer;
+
   @media screen and (max-width: 767px) {
     position: absolute;
     top: 501px;
@@ -58,7 +62,6 @@
     border-radius: 50%;
     border: none;
     outline: none;
-    
   }
 
   @media screen and (min-width: $tablet) {
@@ -183,6 +186,7 @@
     outline: none;
     border: none;
     background-color: $menu-color;
+    cursor: pointer;
   }
 
   @media screen and (min-width: $desktop) {
@@ -201,6 +205,7 @@
     outline: none;
     border: none;
     background-color: $body-color;
+    cursor: pointer;
   }
 }
 
@@ -284,6 +289,7 @@
   background-color: $white-color;
   @media screen and (min-width: $desktop) {
     display: none;
+    cursor: pointer;
   }
 }
 
@@ -299,6 +305,7 @@
   outline: none;
   border: none;
   background-color: $body-color;
+  cursor: pointer;
 
   @media screen and (max-width: 767px) {
     display: none;

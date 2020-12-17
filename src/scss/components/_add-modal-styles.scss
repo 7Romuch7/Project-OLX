@@ -303,27 +303,23 @@ margin-bottom: 30px;
 
 
     
-
-  
 }
 
-
-.add-photo__image-block{
+.add-photo__image-block {
     position: relative;
 
     width: 100%;
     height: 100%;
 
 
-    .add-photo-file{
+    .add-photo-file {
         width: 100%;
         height: 100%;
         opacity: 0;
         visibility: hidden;
-    
-      
     }
-    label{
+
+    label {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -337,15 +333,13 @@ margin-bottom: 30px;
         left: 0px;
         cursor: pointer;
 
-
-        span{
-            
+    span {
         font-family: $basic-font;
         font-style: normal;
         font-weight: normal;
         font-size: 22px;
         line-height: 26px;
-        
+
         text-align: center;
         letter-spacing: 0.02em;
         color: $input-color
@@ -354,7 +348,10 @@ margin-bottom: 30px;
 }
 
 
-
+.add-photo__image-block{
+    width: 100%;
+    height: 100%;
+}
 
 
 

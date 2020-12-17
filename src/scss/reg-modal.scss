@@ -35,9 +35,9 @@
 .lightbox.is-open {
   display: block;
 }
-.lightbox__content {
+ .lightbox__content {
   position: absolute;
-}
+} 
 
 // .backdrop-overlay {
 //   position: relative;
@@ -80,6 +80,7 @@
   border: none;
   outline: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .google-auth {

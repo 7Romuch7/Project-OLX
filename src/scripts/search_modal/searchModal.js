@@ -1,4 +1,3 @@
-
 const backdrop = document.querySelector('.search-modal-backdrop');
 const openSearchModalBtn = document.querySelector('#search-btn');
 const closeSearchModalBtn = document.querySelector('#close-search-modal-button');

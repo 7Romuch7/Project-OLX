@@ -1,20 +1,23 @@
 import './styles.scss';
-import './scripts/header.js';
-import './scripts/footer.js';
-import './scripts/add-modal.js';
-import './scripts/redact-my-products-modal.js' ;
-import './scripts/menu.js';
-import './scripts/reg-modal.js';
-import './scripts/navigation_categores.js';
+import './scripts/header/header.js';
+import './scripts/search_modal/searchModalRender.js';
+import './scripts/search_modal/searchModal.js';
+import './scripts/header/navigation_categores.js';
+import './scripts/header/menu.js';
 
-import './scripts/add-modal-open-close.js';
-import './scripts/add-modal-validate.js' ;
-import './scripts/redact-modal-validation.js' ;
-import './scripts/get-categories-for-add.js';
-import './scripts/load-images-forAdd.js';
+import './scripts/reg_modal/render-reg_modal.js';
+import './scripts/reg_modal/reg-modal.js';
 
-import './scripts/searchModalRender.js';
-import './scripts/searchModal.js';
-import './scripts/addProductModal.js';
-import './scripts/product-slider.js';
+import './scripts/ads_modal/add-modal.js';
+import './scripts/ads_modal/add-modal-open-close.js';
+import './scripts/ads_modal/add-modal-validate.js';
+import './scripts/ads_modal/redact-my-products-modal.js';
+import './scripts/ads_modal/redact-modal-validation.js';
+import './scripts/ads_modal/get-categories-for-add.js';
+import './scripts/ads_modal/load-images-forAdd.js';
+
+import './scripts/product_modal/addProductModal.js';
+import './scripts/product_modal/product-slider.js';
+
+import './scripts/footer/footer.js';
 

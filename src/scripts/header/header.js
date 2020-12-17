@@ -1,4 +1,6 @@
-import header from '../templates/header.hbs';
+import header from '../../templates/header.hbs';
+
+
 
 const headerList = document.querySelector('.header');
 

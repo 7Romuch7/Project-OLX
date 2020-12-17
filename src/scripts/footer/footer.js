@@ -1,4 +1,4 @@
-import templatesFooter from '../templates/footer.hbs';
+import templatesFooter from '../../templates/footer.hbs';
 
 const footerMarcupContainer = document.querySelector('.footer');
 

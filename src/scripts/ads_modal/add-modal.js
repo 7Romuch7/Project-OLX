@@ -1,4 +1,4 @@
-import addModalTempl from '../templates/addModalTempl.hbs' ;
+import addModalTempl from '../../templates/addModalTempl.hbs' ;
 
 console.log(addModalTempl)
 

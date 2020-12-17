@@ -1,4 +1,4 @@
-import redactMyProductsModalTempl from '../templates/redactMyProductsModalTempl.hbs' ;
+import redactMyProductsModalTempl from '../../templates/redactMyProductsModalTempl.hbs' ;
 
 // console.log(redactMyProductsModalTempl)
 

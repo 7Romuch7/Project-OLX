@@ -1,4 +1,4 @@
-import productModal from '../templates/productModal.hbs';
+import productModal from '../../templates/productModal.hbs';
 
 const modalProductContainer = document.querySelector("header");
 

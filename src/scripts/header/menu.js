@@ -8,12 +8,12 @@ closeModalButton.addEventListener('click', closeModalMenu);
 
 function onModalMenu(event) {
     window.addEventListener('keydown', onEscKeydown);
-   event.preventDefault()
+    event.preventDefault()
     backdrop.classList.remove('is-hidden') 
 }
 
 function closeModalMenu(event) {
-     event.preventDefault()
+    event.preventDefault()
     backdrop.classList.add('is-hidden')
 }
   

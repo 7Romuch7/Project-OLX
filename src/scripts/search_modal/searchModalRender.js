@@ -1,4 +1,4 @@
-import searchModalTempl from '../templates/searchModalTempl.hbs';
+import searchModalTempl from '../../templates/searchModalTempl.hbs';
 
 const searchSection = document.querySelector('.header');
 

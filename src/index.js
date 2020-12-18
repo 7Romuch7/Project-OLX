@@ -26,3 +26,6 @@ import './scripts/product_modal/product-slider.js';
 
 import './scripts/footer/footer.js';
 
+import './scripts/gallery/card-gallery.js';
+import './scripts/gallery/slider.js';
+

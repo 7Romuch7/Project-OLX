@@ -80,6 +80,15 @@
   @media screen and(min-width: $tablet) {
   }
 }
+
+.product_link_block {
+  display: flex;
+  align-items: center;
+  &:hover {
+    color: $btn-color;
+  }
+}
+
 .modal_text {
   font-size: 12px;
   line-height: 1.16;
@@ -91,7 +100,7 @@
   letter-spacing: 0.02em;
   text-align: left;
   @media screen and(min-width: $tablet) {
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
   }
 }
 .product_price {
@@ -103,7 +112,16 @@
   text-align: left;
   padding: 30px 0px;
 }
+
+.dealler_infornation_position {
+  position: relative;
+}
+
 .dealler_infornation {
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  width: 255px;
   padding: 17px 58px;
   background-color: $btn-color;
   text-align: center;
@@ -116,9 +134,55 @@
   text-transform: uppercase;
   cursor: pointer;
   @media screen and(min-width: $tablet) {
+    width: 300px;
+    height: 60px;
+  }
+  @media screen and(min-width: $desktop) {
     width: 255px;
     height: 60px;
   }
+}
+
+.dealler_infornation_down {
+  opacity: 0;
+  background-color: $white-color;
+  text-align: center;
+  color: $black-color;
+  text-align: center;
+  padding: 12px 18px;
+  width: 255px;
+  border: 2px solid #ff6b09;
+  line-height: 1.16;
+  cursor: pointer;
+  @media screen and(min-width: $tablet) {
+    width: 300px;
+    height: 60px;
+    padding: 12px 26px;
+  }
+  @media screen and(min-width: $desktop) {
+    width: 255px;
+    height: 60px;
+    padding: 12px 18px;
+  }
+}
+.dealler_infornation_text {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+}
+.dealler_infornation_name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.16;
+}
+.dealler_infornation_phone {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+  text-decoration: none;
+  color: black;
 }
 .product_link_box {
   font-family: Roboto;

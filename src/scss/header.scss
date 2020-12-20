@@ -37,7 +37,7 @@
 .logo {
   position: absolute;
   top: 30px;
-  right: 50%;
+  right: 45%;
 
   font-family: $secondary-font;
   font-weight: 700;
@@ -121,7 +121,7 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items: baseline;
+  align-items: center;
 }
 
 .header__nav-desktop {
@@ -142,14 +142,14 @@
   }
 }
 
-.header__nav, .menu__links-office, .menu__links-registration {
+.header__nav {
   @media screen and (max-width: 1199px) {
     width: 100%;
     display: flex;
     align-items: flex-start;
     align-items: baseline;
     flex-direction: column;
-    border-top: 1px solid $border-color;
+    //border-top: 1px solid $border-color;
     .header__link + .header__link {
       border-top: 1px solid $border-color;
       border-bottom: 1px solid $border-color;
@@ -157,24 +157,21 @@
   }
 }
 
-.menu__links-office {
+.menu__links-office, .menu__links {
   @media screen and (max-width: 1199px) {
-    padding-top: 120px;
-  }
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      align-items: baseline;
+      flex-direction: column;
+    }
 }
 
-.menu__links-registration{
-  @media screen and (max-width: 1199px) {
-    padding-top: 100px;
-  }
-}
-
-.login__btn {
+.login__btn_header {
   @media screen and (max-width: 1199px) {
     position: absolute;
     top: 102px;
     left: 65px;
-    z-index: 2;
     font-family: $basic-font;
     font-size: 12px;
     font-weight: 500;
@@ -185,7 +182,7 @@
     text-transform: uppercase;
     outline: none;
     border: none;
-    background-color: $menu-color;
+    background-color: $body-color;
     cursor: pointer;
   }
 
@@ -193,6 +190,7 @@
     position: absolute;
     top: 25px;
     right: 230px;
+    margin-left: 229px;
     font-family: $basic-font;
     font-size: 12px;
     font-weight: 500;
@@ -200,13 +198,39 @@
     letter-spacing: 1.17;
     color: $black-color;
     text-decoration: none;
-    margin-left: 229px;
     text-transform: uppercase;
     outline: none;
     border: none;
     background-color: $body-color;
     cursor: pointer;
   }
+}
+
+.login__btn {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 27px 0 26px 34px;
+    font-family: $basic-font;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 1.17;
+    color: $black-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    background-color: $menu-color;
+    cursor: pointer;
+  }
+}
+
+.login_menu {
+  margin-left: 12px;
 }
 
 .header__link {
@@ -244,19 +268,10 @@
   }
 }
 
-.user__profile-menu {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding: 27px 0 70px 34px;
-  border-bottom: 1px solid $border-color;
+ .user__profile-menu {
   @media screen and (min-width: $desktop) {
     display: none;
   }
-}
-
-.entrance {
-  padding: 27px 0 40px 34px;
 }
 
 .menu-button {
@@ -322,14 +337,18 @@
   margin-right: 14px;
 }
 
-.dropdown {
+.container_dropdown {
   width: 100%;
-  position: absolute;
-  top: 98px;
-  left: 100px;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+} 
+
+.dropdown {
+  padding: 20px 0 20px 34px;
 }
 
 .dropbtn {
+  width: 100%;
   margin: 0;
   display: flex;
   align-items: center;
@@ -344,18 +363,32 @@
   background-color: $menu-color;
 }
 
-.dropdown-content {
-  position: absolute;
-  top: 30px;
-  left: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  flex-direction: column;
+.my_cabinet-menu {
+  margin-left: 24px;
+}
 
-  .link_office + .link_office {
+.dropdown-content {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    padding: 20px 0 0 54px;
+    min-width: 150px;
+  }
+
+  .link_office_menu + .link_office_menu {
     padding-top: 20px;
   }
+}
+
+.link_office_menu {
+  font-family: $basic-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: $black-color;
 }
 
 .link_office {
@@ -373,6 +406,121 @@
 
 .logout {
   position: absolute;
-  top: 97px;
+  top: 90px;
   right: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown_office {
+  @media screen and (min-width: $tablet) {
+    position: relative;
+    top: 0;
+    right: 20px;
+    display: inline-block;
+  }
+
+  @media screen and (min-width: $desktop) {
+    right: 93px;
+  }
+}
+
+.user__profile-header-office {
+    @media screen and (max-width: 767px) {
+      display: none;
+   }
+}
+
+.dropdown-content_office {
+   @media screen and (max-width: 767px) {
+     display: none;
+   }
+
+  @media screen and (min-width: $tablet) {
+    padding: 20px 0 20px 20px;
+    display: none;
+    position: absolute;
+    right: -20px;
+    min-width: 150px;
+    background: $menu-color;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+
+    .link_office + .link_office {
+      padding-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 20px;
+    min-width: 226px;
+    right: -93px;
+  }
+}
+
+.dropdown-content_office .link_office {
+  @media screen and (min-width: $tablet) {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.link_office:hover, .link_office:focus {
+  color: $btn-color;
+}
+
+.logout_office {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 24px;
+    position: absolute;
+    top: 0;
+    right: 199px;
+    outline: none;
+    border: none;
+    border-left: 1px solid $border-color;
+    background-color: $body-color;
+    cursor: pointer;
+  }
+}
+
+.btn_office {
+  @media screen and (min-width: $tablet) {
+    margin: 0;
+  }
+}
+
+.my_cabinet {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 14px;
+  }
+}
+
+.dropbtn_office {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-family: $basic-font;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: $black-color;
+  border: none;
+  outline: none;
+  background-color: $menu-color;
+}
+
+.dropdown_office:hover .dropdown-content_office,
+.dropdown_office:hover .dropdown-content_office {
+  display: block;
+  margin-top: 23px;
+  transform: translateY(0);
 }

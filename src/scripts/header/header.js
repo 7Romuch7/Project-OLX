@@ -1,4 +1,4 @@
-import header from '../../templates/header.hbs';
+import header from '../../templates/my_office.hbs';
 
 
 

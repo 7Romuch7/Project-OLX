@@ -31,5 +31,5 @@ import './scripts/footer/footer.js';
 
 import './scripts/gallery/card-gallery.js';
 import './scripts/gallery/slider.js';
-import './scripts/getUserInfo.js';
+import './scripts/product_modal/getUserInfo.js';
 

@@ -138,3 +138,31 @@
   line-height: 21px;
   letter-spacing: 0.02em;
 }
+//*allert*//
+.alert {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  resize: horizontal;
+
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.search_form_null_alert,
+.search_form_wrong_alert {
+  font-size: 18px;
+  color: $white-color;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  // opacity: 0.5;
+}
+//*serach-result-container*//
+.search-result {
+  list-style: none;
+  display: flex;
+}

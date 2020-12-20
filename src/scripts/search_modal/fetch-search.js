@@ -15,11 +15,14 @@ function fetchSearch(searchQuery) {
 }
 
 function updateSearchMarckup(result) {
-            console.log(result);
-            const markup = searchResultTmpl(result);
-            console.log(markup);
-            searchContainer.insertAdjacentHTML('beforeend', markup);
-            backdrop.classList.add('is-hidden');
+    // console.log(result);
+    const markup = searchResultTmpl(result);
+            // console.log(markup);
+    searchContainer.insertAdjacentHTML('beforeend', markup);
+     if (markup === ``) { 
+    return alert ('Такого товара нет в наличии')
+    };
+    backdrop.classList.add('is-hidden');
 }
 
 export default fetchSearch;

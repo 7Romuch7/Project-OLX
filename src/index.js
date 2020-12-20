@@ -10,8 +10,11 @@ import './scripts/search_modal/update-search-marcup.js';
 import './scripts/header/navigation_categores.js';
 import './scripts/header/menu.js';
 
-import './scripts/reg_modal/render-reg_modal.js';
-import './scripts/reg_modal/reg-modal.js';
+// import './scripts/reg_modal/render-reg_modal.js';
+// import './scripts/reg_modal/reg-modal.js';
+import './scripts/reg_modal/renderAuthModal.js'
+import './scripts/reg_modal/closeAuthModalEsc.js';
+import './scripts/reg_modal/fetchRegForm.js';
 
 import './scripts/ads_modal/add-modal.js';
 import './scripts/ads_modal/add-modal-open-close.js';

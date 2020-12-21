@@ -5,7 +5,7 @@ import './scripts/search_modal/search-modal-render.js';
 import './scripts/search_modal/search-modal.js';
 import './scripts/search_modal/fetch-search.js';
 import './scripts/search_modal/search-form.js';
-// import './scripts/search_modal/update-search-marcup.js';
+import './scripts/search_modal/update-search-marcup.js';
 
 import './scripts/header/navigation_categores.js';
 import './scripts/header/menu.js';

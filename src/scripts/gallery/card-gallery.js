@@ -1,5 +1,5 @@
-import templatesCadrGallery from '../templates/cardGallery.hbs';
-import templatesCategory from '../templates/category.hbs';
+import templatesCadrGallery from '../../templates/cardGallery.hbs';
+import templatesCategory from '../../templates/category.hbs';
 import { addSlider } from './slider.js';
 import { BASE_URL } from '../constans/index.js'
 import { Object } from 'core-js';

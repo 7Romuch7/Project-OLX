@@ -1,32 +1,38 @@
 import AuthModalTmpl from '../../templates/authorization.hbs';
 import FetchRegistration from './fetchRegForm';
 import FetchLogIn from './fetchLogInForm';
-
+import valid from './email-validation'
+import './email-validation.js'
 import getRefs from './refsAuth';
 // const refs = getRefs();
 const refs = {
     
- openModalBtn: document.querySelector('.login__btn'),
+        openModalBtn: document.querySelector('.login__btn_header'),
         authModalEl: document.querySelector('.auth-modal'),
-        authFormContainer: document.querySelector('.authorization'),
+        authFormContainer: document.querySelector('.auth-backdrop'),
         registerBtn: document.querySelector('.js-register'),
         regBtn: document.querySelector('.js-register'),
+        bodyEl: document.querySelector('.body'),
+    emailInput: document.querySelector('.auth-form-input')
+        
 }
-// renderAuthModal()
 
-// makeMarkup()
 refs.openModalBtn.addEventListener("click", renderAuthModal);
 
-function renderAuthModal(form) {
-    // authFormContainer.classList.remove('is-hidden')
-    const markup = AuthModalTmpl(form)
+function renderAuthModal() {
+    const markup = AuthModalTmpl()
     makeMarkup(markup);
-    document.querySelector('.auth-modal-close-button').addEventListener("click", closeAuthModal);
-}
-    function makeMarkup(html) {
-        refs.authFormContainer.insertAdjacentHTML('afterbegin', html);
-        refs.authFormContainer.addEventListener('click', sendFormData);
+ 
+    document.querySelector('.auth-modal-close-button').addEventListener("click", closeAuthModal());
 
+    
+}
+
+
+function makeMarkup() {
+        refs.bodyEl.insertAdjacentHTML('beforeend', AuthModalTmpl());
+    refs.bodyEl.addEventListener('click', sendFormData);
+    // refs.emailInput.addEventListener('input', validate)
         function sendFormData(event) {
             if(event.target.classList.contains("js-register")) {
                 event.preventDefault();
@@ -43,10 +49,36 @@ function renderAuthModal(form) {
                 const fetchLogIn = new FetchLogIn({ email, password });
                 fetchLogIn.getCurrentUserData();
             }
-        }
+    }
 }
-export default function closeAuthModal(event) {
-    event.preventDefault();
-    refs.authFormContainer.innerHTML =' ';
+
+
+
+ 
+function closeAuthModal(event) {
+    //  event.preventDefault()
+    //  bodyEl.insertAdjacentHTML('')
+     
+    //  window.addEventListener('keydown', onKeyPress);
+
+   function onKeyPress(event) {
+    const ESC_KEY_CODE = 'Escape';
+    
+    const isEscKey = event.code === ESC_KEY_CODE;
+    
+    if (isEscKey) {
+        closeAuthModal(event);
+    }
+  }
+    // event.preventDefault();
+    // refs.authFormContainer.innerHTML =' ';
 }
-// renderAuthModal()
+
+// function validate(evt) {
+//     evt.preventDefault()
+//    const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+//    if(reg.test(emailInput) == false) {
+//       alert('Введите корректный e-mail');
+//       return false;
+//    }
+// }

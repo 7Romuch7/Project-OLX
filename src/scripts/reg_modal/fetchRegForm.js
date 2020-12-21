@@ -2,6 +2,14 @@ import getRefs from './refsAuth';
 const refs = getRefs();
 import closeAuthModal from './renderAuthModal';
 
+// const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+
+import './email-validation.js'
+import validate from './email-validation.js';
+        
+
+
 export default class FetchRegistration {
         constructor ({ email, password }) {
             this.email = email,
@@ -17,16 +25,22 @@ export default class FetchRegistration {
                 return fetch(`https://callboard-backend.herokuapp.com/auth/register`, this.options)
                     .then(response => {
                         console.log(response);
+                         
                         if(response.ok) {
                             alert('Дякуємо. Реєстрація пройшла успішно!');
-                            refs.authFormContainer.innerHTML =' ';
+                            // refs.authFormContainer.insertAdjacentHTML();
                         } else if (response.status === 409) {
                             alert('Ошибка HTTP ' + response.status + ': Користувач з таким email вже зареєстрований.');
                         } else if (response.status === 400) {
-                            alert('Ошибка HTTP ' + response.status + ': Заповніть, будь ласка, всі поля.');
-                        } else {
+                         
+                       alert('Ошибка HTTP ' + response.status + ': Заповніть, будь ласка, всі поля.');
+                        }
+     
+                    
+                        else {
                             alert('Ошибка HTTP ' + response.status + ': Вибачте, щось пішло не так, повторіть реєстрацію, будь ласка.');
-                        }    
+                        } 
+                        
                         }
                     )
                     .catch(error => {

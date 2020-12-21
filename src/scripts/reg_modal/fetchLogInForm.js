@@ -1,7 +1,7 @@
-import getRefs from './refsAuth';
-const refs = getRefs();
-import closeAuthModal from './renderAuthModal';
-
+// import getRefs from './refsAuth';
+// const refs = getRefs();
+// import closeAuthModal from './renderAuthModal';
+import './email-validation.js'
 export default class FetchLogIn {
         constructor ({ email, password }) {
             this.email = email,

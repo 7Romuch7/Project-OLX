@@ -84,9 +84,18 @@
 .product_link_block {
   display: flex;
   align-items: center;
-  &:hover {
+  color: #878686;
+  fill: #878686;
+  &:hover,
+  :active,
+  :visited {
     color: $btn-color;
+    fill: $btn-color;
   }
+}
+.product_link_active {
+  color: $btn-color;
+  fill: $btn-color;
 }
 
 .modal_text {

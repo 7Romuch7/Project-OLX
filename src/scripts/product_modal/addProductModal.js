@@ -14,7 +14,7 @@ let infoAboutSaller;
 let infoAboutSallerCover;
 
 function prepareModal() {
-    /* let openModalProduct = document.getElementById("myBtn"); */
+    
     let closeModal = document.querySelector('#close_modal_product');
     backdropMod = document.querySelector('.backdropProduct');
 
@@ -25,7 +25,6 @@ function prepareModal() {
     infoAboutSallerCover.addEventListener('click', showInfoAboutsaller);
 
     closeModal.addEventListener('click', closeModalProduct);
-    /* openModalProduct.addEventListener('click', openModalFunc); */
     backdropMod.addEventListener('click', closeModalOnBackdropProduct) ;
 }
 
@@ -44,8 +43,8 @@ export default function openModalFunc(card) {
 
     backdropMod.classList.remove('is-hidden');
     window.addEventListener('keydown', onEscKeydown);
-    console.log(card);
-
+    /* console.log(card);
+ */
 }
 
 function closeModalProduct(e) {

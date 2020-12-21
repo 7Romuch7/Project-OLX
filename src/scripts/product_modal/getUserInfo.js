@@ -7,7 +7,7 @@ headers.append(
   'Authorization',
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmQzMzJhNjgwZGFiZDAwMTc5ZDdmYWYiLCJzaWQiOiI1ZmQzMzUzYTgwZGFiZDAwMTc5ZDdmZTQiLCJpYXQiOjE2MDc2NzcyNDIsImV4cCI6MTYxMDMwNTI0Mn0.k7ClxKFHWx8UIIIIY0VZmvB7mOnpOvK7N00Mk6jdotc',
 );
-
+/* инфо по id */
 function getShortInfoById(userId) {
     
     return fetch(`${BASE_URL}/user/${userId}`,{
@@ -24,8 +24,8 @@ function getShortInfoById(userId) {
 /* getShortInfoById(); */
 
 
-
-
+/* 
+информация про юзера */
 function getInfo() {
     
    return fetch(`${BASE_URL}/user`,{
@@ -42,8 +42,15 @@ function getInfo() {
 }
 /* getInfo(); */
 
-function addToFavorites(callId) {
-    
+
+/* добавление в избранное */
+/* const btnToFavorites = document.querySelector('.dealler_infornation');
+btnToFavorites.addEventListener('submit', addToFavoritesFunc); */
+
+function addToFavoritesFunc(callId) {
+        
+   btnToFavorites.classList.add('product_link_active'); 
+        
    return fetch(`${BASE_URL}/call/favourite/${callId}`,{
   method: 'POST',
   headers: headers,
@@ -51,8 +58,13 @@ function addToFavorites(callId) {
         .then(response => response.json())
         .then(result => console.log(result))
         .catch(error => console.log('Invalid session', error));
+          
 }
-/* addToFavorites(4); */
+
+/* addToFavorites(); */
+
+
+/* удаление с избранного */
 function removeCallToFavorites(callId) {
     
    return fetch(`${BASE_URL}/call/favourite/${callId}`,{

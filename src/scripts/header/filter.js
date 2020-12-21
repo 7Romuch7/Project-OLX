@@ -1,4 +1,4 @@
-/*const routers = [
+const routers = [
     
     {
         path: '/',    
@@ -58,10 +58,10 @@ let auth = true;
 let startState = true;
 
 
-//let divPagination = document.querySelector('контейнер пагинации');
-//const listPagination = document.querySelector('список пагинации')
+let divPagination = document.querySelector('.nav-paggination');
+const listPagination = document.querySelector('.form_radio_group')
 const clearBtn = document.querySelector('.filter')
-//const clearOfficeBtn = document.querySelector('.filter_office')
+const clearOfficeBtn = document.querySelector('.filter_office')
 const showCategories = document.querySelector('.category')
 
 function filterPage(event) {
@@ -110,4 +110,4 @@ function showHistory(event) {
 divPagination.addEventListener('click', filterPage);
 listPagination.addEventListener('click', filterPage);
 clearBtn.addEventListener('click', showClearBtn);
-clearOfficeBtn.addEventListener('click', showClearOfficeBtn); */
+clearOfficeBtn.addEventListener('click', showClearOfficeBtn);

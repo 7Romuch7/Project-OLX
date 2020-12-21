@@ -26,10 +26,11 @@ import './scripts/ads_modal/load-images-forAdd.js';
 
 import './scripts/product_modal/addProductModal.js';
 import './scripts/product_modal/product-slider.js';
-
-import './scripts/footer/footer.js';
+import './scripts/product_modal/getUserInfo.js';
 
 import './scripts/gallery/card-gallery.js';
 import './scripts/gallery/slider.js';
-import './scripts/product_modal/getUserInfo.js';
+
+import './scripts/footer/footer.js';
+
 

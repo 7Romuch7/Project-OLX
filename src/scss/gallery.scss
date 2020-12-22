@@ -1,40 +1,116 @@
-.slider {
-  display: flex;
-  
+.slide {
+  position: relative;
+  @media screen and (min-width: $mobile) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet) {
+      margin-right: 20px;
+    }
+  }
 }
 
-.slide-img {
-    display: block;
-    width: 100%;
-    margin-top: 27px;
-}
-
-.item-card {
-    width: 100%;
-    margin: 15px;
-    max-width: 294px;
+.img-thumb {
+  min-width: 290px;
+  max-width: 350px;
+  max-height: 275px;
+  margin: 0 auto;
 }
 
 .card-content {
-    padding: 20px 0 21px 19px;
-    background-color: $white-color;
+  padding: 20px 0 21px 19px;
 }
 
 .goods-item {
-    margin-bottom: 14px;
-    font-family: $basic-font;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.07em;
-    color: $black-color;
+  margin-bottom: 0;
+  font-family: $basic-font;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.07em;
+  color: $black-color;
 }
 
 .new-price {
-    font-family: $basic-font;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.04em;
-    color: $btn-color;
+  font-family: $basic-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: $btn-color;
+}
+
+// категории
+
+.category-title {
+  margin-left: 15px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 72px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 78px;
+  }
+}
+
+// стили и позиция кнопки слайдера
+
+.button-slider {
+  position: relative;
+}
+
+.gallery-prev,
+.gallery-next {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    z-index: 5;
+    fill: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    background-color: $white-color;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none !important;
+  }
+}
+
+.gallery-next {
+  right: 22px;
+  @media screen and (min-width: $desktop) {
+    right: 20px;
+  }
+}
+
+.gallery-prev {
+  left: 22px;
+  @media screen and (min-width: $desktop) {
+    left: 20px;
+  }
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+  background-color: $btn-color;
+  fill: $white-color;
 }

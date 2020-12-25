@@ -108,10 +108,47 @@
   display: flex;
   // justify-content: flex-start;
 }
-//  позиция иконки сердечко
+//  позиция иконок
 
 .gallery-favorite-link {
   position: absolute;
   top: 19px;
   right: 17px;
+}
+
+.gallery-fullscreen-link {
+  position: absolute;
+  bottom: 91px;
+  right: 16px;
+}
+
+.gallery-edit-link {
+  position: absolute;
+  top: 43px;
+  right: 18px;
+}
+
+.gallery-favorite-link,
+.gallery-fullscreen-link,
+.gallery-edit-link {
+  display: none;
+}
+
+.item-card:hover .gallery-favorite-link,
+.item-card:hover .gallery-fullscreen-link {
+  display: block;
+}
+
+// оверлей
+.img-thumb::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 275px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.item-card:hover .img-thumb::before {
+  opacity: 1;
 }

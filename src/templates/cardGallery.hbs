@@ -13,9 +13,9 @@
   </div>
 
   <div class="slider " style="left: 0">
-    {{#each this}}
-    <div class="slide">
-      <ul class="card-list-item">
+    <ul class="card-list-item">
+      {{#each this}}
+      <div class="slide">
         <li class="item-card">
           <div class="img-thumb">
             <img class="slide-img img-cont" src="{{imageUrls}}" alt='cat'>
@@ -59,9 +59,10 @@
             </a>
           </div>
         </li>
-      </ul>
-    </div>
-    {{/each}}
+
+      </div>
+      {{/each}}
+    </ul>
   </div>
 </div>
 <div class="viewSlider">

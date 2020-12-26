@@ -1,34 +1,68 @@
 <div class="viewport">
   <div class="button-slider">
-    <button class="prev" id="prev"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11.557 5.558L10.5 4.5 6 9l4.5 4.5 1.057-1.057L8.123 9l3.434-3.442z" fill="#000" />
+    <button class="gallery-prev" id="gallery-prev"><svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.557 5.558L10.5 4.5 6 9l4.5 4.5 1.057-1.057L8.123 9l3.434-3.442z" />
       </svg></button>
     <div class="content-text">
     </div>
-    <button class="next" id="next">
-      <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6.442 5.558L7.5 4.5 12 9l-4.5 4.5-1.058-1.057L9.877 9 6.442 5.558z" fill="#000" />
+    <button class="gallery-next" id="gallery-next">
+      <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.442 5.558L7.5 4.5 12 9l-4.5 4.5-1.058-1.057L9.877 9 6.442 5.558z" />
       </svg>
     </button>
   </div>
 
-  <div class="slider" style="left: 0">
-    {{#each this}}
-    <div class="slide">
-      <ul class="card-list-item">
+  <div class="slider " style="left: 0">
+    <ul class="card-list-item">
+      {{#each this}}
+      <div class="slide">
         <li class="item-card">
-          <img class="slide-img img-cont" src="{{imageUrls}}" alt='cat'>
+          <div class="img-thumb">
+            <img class="slide-img img-cont" src="{{imageUrls}}" alt='cat'>
+          </div>
           <div class="card-content">
             <p class="goods-item">{{title}}</p>
             <div class="prices">
-              <p class="old-price"></p>
-              <p class="new-price">{{price}}</p>
+              <p class="old-price hide"></p>
+              <p class="new-price">{{price}} грн</p>
             </div>
           </div>
+          <div class="gallery-card-icons">
+            <a class="gallery-favorite-link">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8 14C7.80069 14 7.60854 13.9304 7.45879 13.8041C6.89322 13.3276 6.34795 12.8799 5.86687 12.4849L5.86441 12.4829C4.45396 11.3249 3.23599 10.3248 2.38855 9.33973C1.44124 8.23843 1 7.19425 1 6.05354C1 4.94525 1.39445 3.92279 2.11063 3.17436C2.83534 2.41708 3.82976 2 4.91101 2C5.71915 2 6.45924 2.24615 7.11069 2.73155C7.43945 2.97657 7.73746 3.27644 8 3.62621C8.26265 3.27644 8.56055 2.97657 8.88942 2.73155C9.54086 2.24615 10.281 2 11.0891 2C12.1702 2 13.1648 2.41708 13.8895 3.17436C14.6057 3.92279 15 4.94525 15 6.05354C15 7.19425 14.5589 8.23843 13.6116 9.33962C12.7641 10.3248 11.5462 11.3248 10.136 12.4827C9.65408 12.8782 9.10796 13.3267 8.54111 13.8043C8.39146 13.9304 8.1992 14 8 14ZM4.91101 2.79011C4.06154 2.79011 3.28117 3.11673 2.71347 3.70988C2.13733 4.31197 1.81999 5.14427 1.81999 6.05354C1.81999 7.01293 2.19009 7.87096 3.01991 8.83559C3.82196 9.76802 5.01494 10.7475 6.39622 11.8816L6.39879 11.8836C6.88168 12.2801 7.42909 12.7296 7.99883 13.2096C8.57198 12.7287 9.12024 12.2785 9.6041 11.8814C10.9853 10.7473 12.1781 9.76802 12.9802 8.83559C13.8099 7.87096 14.18 7.01293 14.18 6.05354C14.18 5.14427 13.8627 4.31197 13.2865 3.70988C12.7189 3.11673 11.9385 2.79011 11.0891 2.79011C10.4668 2.79011 9.89548 2.98069 9.39101 3.3565C8.94144 3.69156 8.62827 4.11512 8.44466 4.41148C8.35023 4.56389 8.18404 4.65486 8 4.65486C7.81596 4.65486 7.64977 4.56389 7.55534 4.41148C7.37184 4.11512 7.05867 3.69156 6.60899 3.3565C6.10452 2.98069 5.53319 2.79011 4.91101 2.79011Z"
+                  fill=" white" stroke="#878686" stroke-width="0.3" />
+              </svg>
+            </a>
+            <a class="gallery-fullscreen-link">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.83329 11.6666H4.16663V15.8333H8.33329V14.1666H5.83329V11.6666ZM4.16663 8.33329H5.83329V5.83329H8.33329V4.16663H4.16663V8.33329ZM14.1666 14.1666H11.6666V15.8333H15.8333V11.6666H14.1666V14.1666ZM11.6666 4.16663V5.83329H14.1666V8.33329H15.8333V4.16663H11.6666Z"
+                  fill="white" />
+              </svg>
+            </a>
+            <a class="gallery-edit-link">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                  <path d="M14 13H0V14.3H14V13Z" fill="white" />
+                  <path
+                    d="M9.59313 0.454102L2.36365 7.68358V10.9995H5.67961L12.9091 3.77007L9.59313 0.454102ZM5.19334 9.82782H3.53537V8.16985L9.59313 2.11207L11.2511 3.77004L5.19334 9.82782Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="14" height="14" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
         </li>
-      </ul>
-    </div>
-    {{/each}}
+
+      </div>
+      {{/each}}
+    </ul>
   </div>
 </div>
 <div class="viewSlider">

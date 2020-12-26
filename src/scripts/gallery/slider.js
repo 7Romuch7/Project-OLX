@@ -3,8 +3,8 @@ export  const addSlider = (item) => {
     let viewportRef = item.querySelector(".viewport");
     if (!viewportRef) return
     const viewport = viewportRef.offsetWidth;
-    const btnNext = item.querySelector(".next");
-    const btnPrev = item.querySelector(".prev");
+    const btnNext = item.querySelector(".gallery-next");
+    const btnPrev = item.querySelector(".gallery-prev");
     const slider = item.querySelector("div.slider");
     let viewSlide = 0;
 

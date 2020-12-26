@@ -1,80 +1,19 @@
 .viewport {
   margin-left: auto;
   margin-right: auto;
-  // margin-top: 95px;
+
   max-width: 320px;
-  height: 390px;
+  height: calc(350px * 2 + 60px);
   overflow: hidden;
-  padding: 10px 20px 50px 20px;
 
   @media screen and(min-width: $tablet) {
+    height: 390px;
     max-width: 724px;
   }
 
   @media screen and(min-width: $desktop) {
     max-width: 1240px;
   }
-}
-
-.category {
-  max-width: 320px;
-
-  @media screen and(min-width: $tablet) {
-    max-width: 724px;
-  }
-
-  @media screen and(min-width: $desktop) {
-    max-width: 1240px;
-  }
-}
-
-.slider {
-  position: relative;
-  transition: 500ms;
-  // width: calc(100% * 4);
-  width: 290px;
-  height: 350px;
-  // // display: flex;
-  // display: block;
-  // // justify-content: flex-start;
-  // // flex-wrap: nowrap;
-  // // flex-direction: column;
-  margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  // overflow: hidden;
-  display: block;
-
-  @media screen and (min-width: $tablet) {
-    max-width: 724px;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    width: calc(100% * 2);
-  }
-  @media screen and (min-width: $desktop) {
-    max-width: 1240px;
-    width: calc(100% * 4);
-  }
-}
-
-.slide {
-  display: block;
-  width: 295px;
-  height: 350px;
-  background-color: #fff;
-  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-.slide:not(:last-child) {
-  margin-right: 20px;
-}
-
-.slide img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  object-position: 0;
 }
 
 .viewSlider {
@@ -91,29 +30,175 @@
   background-color: red;
 }
 
-.button-slider {
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+.slider {
+  transition: 500ms;
+  width: 290px;
+  height: 350px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: calc(100% * 2);
+
+  @media screen and (min-width: $tablet) {
+    max-width: 724px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: calc(100% * 2);
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1240px;
+    width: calc(100% * 4);
+  }
+}
+
+.card-list-item {
+  margin-left: 15px;
+  margin-right: 15px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+//------------ карточка товара-------------
+
+.slide {
+  display: block;
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  width: 290px;
+  height: 350px;
+  background-color: $white-color;
+  position: relative;
+
+  @media screen and (min-width: $mobile) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $tablet) {
+    height: 346px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 350px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $tablet) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.slide-img,
+.img-cont {
+  display: block;
+  width: inherit;
+  height: 275px;
+  object-fit: cover;
+}
+
+.img-thumb {
+  min-width: 290px;
+  max-width: 350px;
+  max-height: 275px;
+  margin: 0 auto;
 }
 
 .content-text {
   display: flex;
-  // justify-content: flex-start;
 }
 
-#prev,
-#next {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: none;
-  background-color: white;
+.card-content {
+  padding: 20px 0 21px 19px;
 }
 
-#next {
-  top: 50%;
-  right: 0;
+.goods-item {
+  margin-bottom: 0;
+  font-family: $basic-font;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.07em;
+  color: $black-color;
+}
+
+.new-price {
+  font-family: $basic-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: $black-color;
+}
+
+.old-price {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  color: $input-color;
+  text-decoration: line-through;
+  text-decoration-color: $black-color;
+  margin-right: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+// ----------------- позиция иконок ----------------
+
+.gallery-favorite-link {
+  position: absolute;
+  top: 19px;
+  right: 17px;
+}
+
+.gallery-fullscreen-link {
+  position: absolute;
+  bottom: 91px;
+  right: 16px;
+}
+
+.gallery-edit-link {
+  position: absolute;
+  top: 43px;
+  right: 18px;
+}
+
+.gallery-favorite-link,
+.gallery-fullscreen-link,
+.gallery-edit-link {
+  display: none;
+}
+
+.item-card:hover .gallery-favorite-link,
+.item-card:hover .gallery-fullscreen-link {
+  display: block;
+}
+
+//--------------------- оверлей -------------------
+.img-thumb::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 275px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.item-card:hover .img-thumb::before {
+  opacity: 1;
 }

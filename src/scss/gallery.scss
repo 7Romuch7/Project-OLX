@@ -1,50 +1,22 @@
-.slide {
-  position: relative;
-  @media screen and (min-width: $mobile) {
-    margin-left: auto;
-    margin-right: auto;
+//----------------------- категории ---------------
+.category {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and(min-width: $tablet) {
+    max-width: 724px;
+    height: 450px;
+  }
+
+  @media screen and(min-width: $desktop) {
+    max-width: 1240px;
   }
 
   &:not(:last-child) {
-    margin-bottom: 30px;
-
-    @media screen and (min-width: $tablet) {
-      margin-right: 20px;
-    }
+    border-bottom: 4px solid #e2e3e5;
   }
 }
-
-.img-thumb {
-  min-width: 290px;
-  max-width: 350px;
-  max-height: 275px;
-  margin: 0 auto;
-}
-
-.card-content {
-  padding: 20px 0 21px 19px;
-}
-
-.goods-item {
-  margin-bottom: 0;
-  font-family: $basic-font;
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.07em;
-  color: $black-color;
-}
-
-.new-price {
-  font-family: $basic-font;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.16;
-  letter-spacing: 0.04em;
-  color: $btn-color;
-}
-
-// категории
 
 .category-title {
   margin-left: 15px;

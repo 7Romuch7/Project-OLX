@@ -56,7 +56,7 @@ function makeMarkup() {
 
  
 function closeAuthModal(event) {
-    //  event.preventDefault()
+      event.preventDefault()
     //  bodyEl.insertAdjacentHTML('')
      
     //  window.addEventListener('keydown', onKeyPress);

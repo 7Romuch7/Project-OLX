@@ -1,3 +1,4 @@
+<div>{{>./my_office.hbs}}</div>
 <div class="container_cabinet">
     <div class="container_ads">
         <button class="prev" id="prev">
@@ -22,9 +23,6 @@
                 data-images="{{imageUrls}}" data-price="{{price}}">
                 <div class="ads_img-container">
                     {{#each imageUrls}}<img src="{{this}}" alt="">{{/each}}
-                    {{!-- <svg class="calls-favourites__heart__icon">
-                        <use href="../images/sprite/symbol-defs.svg#icon-heart-orange"></use>
-                    </svg> --}}
                 </div>
                 <div class="ads_text-container">
                     <p>{{title}}</p>

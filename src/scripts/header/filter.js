@@ -1,5 +1,4 @@
 const routers = [
-    
     {
         path: '/',    
         // component: fun1,
@@ -32,7 +31,7 @@ const routers = [
         meta: { auth: false}
     },
     {
-        path: '/trade ',   
+        path: '/trade',   
         meta: { auth: false}
     },
     {
@@ -78,6 +77,7 @@ function filterPage(event) {
     showHistory(event);    
     
 }
+
 function showClearBtn(event) {
     event.preventDefault();
     if (event.target.tagName !== "A") return
@@ -86,19 +86,21 @@ function showClearBtn(event) {
     showHistory2(event);    
     
 }
+
 function showClearOfficeBtn(event) {
     event.preventDefault();
     if (event.target.tagName !== "BUTTON") return
     showCategories.classList.add('is_hiden')
     showHistory2(event);    
-    
 }
+
 function showHistory2(event) {
     const query = '/';
     let router = routers.find( item => item.path === query);
     if (!router) return
     if (!router.meta.auth || !auth) history.pushState(query, null, query)
 }
+
 function showHistory(event) {
     const query = event.target.getAttribute('href');
     let router = routers.find( item => item.path === query);

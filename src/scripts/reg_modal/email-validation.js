@@ -1,5 +1,4 @@
-import 
-   './refsAuth.js'
+import './refsAuth.js'
 
 export default function validate() {
   const emailInput = document.querySelector('.auth-form-input')

@@ -8,7 +8,7 @@ const refs = {
 }
 
 
-console.log(refs.openAddModalButtonEl);
+//console.log(refs.openAddModalButtonEl);
 
 
 refs.openAddModalButtonEl.addEventListener('click', openAddModalHandler);

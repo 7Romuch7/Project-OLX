@@ -10,22 +10,25 @@ export default class FetchLogIn {
             this.options = {
                 method: 'POST',
                 headers: {"accept": "application/json",  "Content-Type": "application/json"},
-                body: JSON.stringify({"email": `${email}`, "password": `${password}`})
+                body: JSON.stringify({"email": `${email}`, "password": `${password}`}),
             };
         }
             getCurrentUserData() {
                 return fetch(`https://callboard-backend.herokuapp.com/auth/login`, this.options)
-                .then(response => {
-                    console.log(response);
-                    if(response.ok) {
-                        refs.authFormContainer.innerHTML =' ';
-                    } else if (response.status === 403) {
-                        alert('Ошибка HTTP ' + response.status + ': Неправильний email або пароль');
-                    } else if (response.status === 400) {
-                        alert('Ошибка HTTP ' + response.status + ': Заповніть, будь ласка, всі поля.');
-                    } else {
-                        alert('Ошибка HTTP ' + response.status + ': Вибачте, щось пішло не так, повторіть реєстрацію, будь ласка.');
-                    }    
+                    .then(response => {
+                        if (response.ok) {
+                           // refs.authFormContainer.innerHTML =' ';
+                            localStorage.setItem('token', response.accessToken);
+                            localStorage.setItem('sid', response.sid);
+                            localStorage.setItem('refresh', response.refreshToken);
+                            console.log(response.user);
+                        } else if (response.status === 403) {
+                            alert('Ошибка HTTP ' + result.status + ': Неправильний email або пароль');
+                        } else if (response.status === 400) {
+                            alert('Ошибка HTTP ' + response.status + ': Заповніть, будь ласка, всі поля.');
+                        } else {
+                            alert('Ошибка HTTP ' + response.status + ': Вибачте, щось пішло не так, повторіть реєстрацію, будь ласка.');
+                        }    
                     }
                 )
                 .catch(error => {

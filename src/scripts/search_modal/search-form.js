@@ -23,7 +23,7 @@ function onSearch(event) {
 
     const form = event.currentTarget;
     const inputValue = form.elements.query.value;
-      console.log(inputValue);
+      //console.log(inputValue);
 
     searchContainer.innerHTML = '';
     form.reset();

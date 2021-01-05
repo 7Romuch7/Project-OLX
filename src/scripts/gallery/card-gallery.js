@@ -36,7 +36,7 @@ function getDataCategory(category) {
 
 /*=========Функция call-back для клика на "Дивитись усі"=========*/
 function showAllGoodsCategory(event) { 
-  console.log(event.target.dataset.filter);
+  //console.log(event.target.dataset.filter);
   if (event.target.dataset.filter != undefined) {
   getDataCategory(event.target.dataset.filter);  
   }
@@ -52,7 +52,7 @@ function firstLoad() {
 
 /*=========Функция обработки выбора конкретного радиобатона=========*/
 function radioBtnChoice(evt) { 
-  console.log(evt.target.value);
+  //console.log(evt.target.value);
 
   if (evt.target.checked) { 
     clearGallery();
@@ -68,8 +68,8 @@ function clearGallery() {
 /*=========Функция рендеринга карточки товара=========*/
 function renderCard(categories) { 
   for (let card in categories) { 
-    console.log('this is card', card);
-    console.log('this is categories card', categories[card]);
+    //console.log('this is card', card);
+    //console.log('this is categories card', categories[card]);
     let gellary = document.querySelector('[data-category="'+card+'"]');
     gellary.insertAdjacentHTML('beforeend', templatesCadrGallery(categories[card]))
      
@@ -112,8 +112,8 @@ function fetchCategories(pageNum) {
       })
       let arrCategories = templatesCategory(items);
       cardCategoryMarkup.insertAdjacentHTML('afterbegin', arrCategories);
-      console.log('this is numPage', pageNum);
-      console.log('this is categories', categories);
+      //console.log('this is numPage', pageNum);
+      //console.log('this is categories', categories);
       renderCard(categories);
       // renderPaginationBtns();
     });

@@ -1,6 +1,6 @@
 import addModalTempl from '../../templates/addModalTempl.hbs' ;
 
-console.log(addModalTempl)
+//console.log(addModalTempl)
 
 
 const mainSection =  document.querySelector('.main');

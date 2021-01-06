@@ -2,6 +2,8 @@
 // const refs = getRefs();
 // import closeAuthModal from './renderAuthModal';
 import './email-validation.js'
+import cabinetFetch from '../my_office/office.js';
+
 export default class FetchLogIn {
         constructor ({ email, password }) {
             this.email = email,
@@ -19,13 +21,14 @@ export default class FetchLogIn {
                 if (response.ok) {
                     return response.json()
                 }
+                cabinetFetch();
             })
             .then(response => {
                     // refs.authFormContainer.innerHTML =' ';
                     localStorage.setItem('token', response.accessToken);
                     localStorage.setItem('sid', response.sid);
                     localStorage.setItem('refresh', response.refreshToken);
-                    console.log(response.user);
+                console.log(response.user);
                 if (response.status === 403) {
                     alert('Ошибка HTTP ' + result.status + ': Неправильний email або пароль');
                 } else if (response.status === 400) {

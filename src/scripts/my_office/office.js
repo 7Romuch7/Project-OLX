@@ -3,7 +3,7 @@ import cabinetPage from '../../templates/my_cabinet-page.hbs';
 
 const BASE_URL = 'https://callboard-backend.herokuapp.com';
 
-function cabinetFetch() {
+export default function cabinetFetch() {
     var myHeaders = new Headers();
     let localToken = localStorage.getItem('token');
     myHeaders.append('Authorization', localToken);

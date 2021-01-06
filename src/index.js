@@ -16,6 +16,8 @@ import './scripts/reg_modal/fetchLogInForm.js';
 import './scripts/reg_modal/refsAuth.js';
 import './scripts/reg_modal/email-validation.js';
 
+import './scripts/my_office/office.js';
+
 import './scripts/ads_modal/add-modal.js';
 import './scripts/ads_modal/add-modal-open-close.js';
 import './scripts/ads_modal/add-modal-validate.js';

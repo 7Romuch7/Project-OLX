@@ -37,6 +37,6 @@ export default class FetchLogIn {
             .catch(error => {
                     console.log(error);
                     alert('Вибачте, щось пішло не так, повторіть реєстрацію, будь ласка');
-                });
+            });
     }
 }

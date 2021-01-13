@@ -1,53 +1,66 @@
+import CategoriesAPI from '../gallery/сategories.js';
+
+const API = new CategoriesAPI();
+
 const routers = [
     {
         path: '/',    
-        // component: fun1,
+        component: API.onHome,
         meta: { auth: false}
     },
-    {
+    /* {
         path: '/page2',    
-        // component: fun2,
+        component: API.onHome,
         meta: { auth: false}
     },
     {
         path: '/page3',   
         // component: fun3,
         meta: { auth: false}
-    },
+    }, */
     {
-        path: '/recreation and sport',   
+        path: '/recreationAndSport',
+        component: API.onRecreationAndSport,
         meta: { auth: false}
     },
     {
-        path: '/free',   
+        path: '/free',
+        component: API.onFree,
         meta: { auth: false}
     },
     {
-        path: '/business and services',   
+        path: '/businessAndServices',
+        component: API.onBusinessAndServices,
         meta: { auth: false}
     },
     {
-        path: '/electronics',   
+        path: '/electronics',
+        coponent: API.onElectronics,
         meta: { auth: false}
     },
     {
-        path: '/trade',   
+        path: '/trade',
+        component: API.onTrade,
         meta: { auth: false}
     },
     {
-        path: '/transport',   
+        path: '/transport',
+        component: API.onTransport,
         meta: { auth: false}
     },
     {
-        path: '/work',   
+        path: '/work',
+        component: API.onWork,
         meta: { auth: false}
     },
     {
-        path: '/property',   
+        path: '/property',
+        component: API.onProperty,
         meta: { auth: false}
     },
     {
-        path: '/sales',   
+        path: '/sales',
+        component: API.onSales,
         meta: { auth: false}
     },
 
@@ -62,20 +75,14 @@ const listPagination = document.querySelector('.form_radio_group')
 const clearBtn = document.querySelector('.filter')
 const clearOfficeBtn = document.querySelector('.filter_office')
 const showCategories = document.querySelector('.category')
+const links = document.querySelector('.menu__links');
 
 function filterPage(event) {
     event.preventDefault();
-    const getHref = event.target.getAttribute('href')
-    if (event.target.tagName !== "A") return
-    if (getHref !== '/'
-        && getHref !== '/page2'
-        && getHref !== '/page3') {
-        
-        showCategories.classList.remove('is_hiden')
-    }
-    
+    const tagName = event.target.tagName
+    if (tagName !== "A") return
+    updatedContent();
     showHistory(event);    
-    
 }
 
 function showClearBtn(event) {
@@ -108,8 +115,25 @@ function showHistory(event) {
     if (!router.meta.auth || !auth) history.pushState(query, null, query)
 }
 
+function updatedContent() {
+  let router = routers.find(
+    item => item.path === history.state || item.path === location.pathname,
+  );
+  if (!router) {
+    API.onError();
+    return;
+  }
+  if (!router.meta.auth || !auth) {
+    router.component();
+  } else if (router.meta.auth && auth && startState) {
+    routers[0].component();
+    history.pushState(routers[0].path, null, routers[0].path);
+  }
+  startState = false;
+}
 
+links.addEventListener('click', filterPage);
 divPagination.addEventListener('click', filterPage);
 listPagination.addEventListener('click', filterPage);
 clearBtn.addEventListener('click', showClearBtn);
-clearOfficeBtn.addEventListener('click', showClearOfficeBtn);
+//clearOfficeBtn.addEventListener('click', showClearOfficeBtn);

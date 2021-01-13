@@ -1,6 +1,5 @@
 import cabinetPage from '../../templates/my_cabinet-page.hbs';
 
-
 const BASE_URL = 'https://callboard-backend.herokuapp.com';
 
 export default function cabinetFetch() {
@@ -15,9 +14,9 @@ export default function cabinetFetch() {
     return fetch(`${BASE_URL}/user`, options)
         .then(response => response.json())
         .then(result => {
-            result;
+            console.log('office', result);
             if (localStorage['token']) {
-                document.querySelector('.main').innerHTML = cabinetPage(render.user);
+                document.querySelector('.main').innerHTML = cabinetPage(result.favorites);
             }
         })
 }

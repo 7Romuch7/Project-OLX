@@ -60,7 +60,7 @@
     padding: 15px;
     background-color: $btn-color;
     border-radius: 50%;
-    border: none;
+    border: 1px solid $btn-color;
     outline: none;
   }
 
@@ -77,7 +77,8 @@
     text-align: center;
     text-transform: uppercase;
     color: $white-color;
-    border: none;
+    border: 1px solid $btn-color;
+    outline: none;
   }
   @media screen and (min-width: $tablet) {
     margin-left: 19px;

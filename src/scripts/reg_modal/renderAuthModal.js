@@ -8,12 +8,13 @@ import getRefs from './refsAuth';
 const refs = {
     
         openModalBtn: document.querySelector('.login__btn_header'),
+        bodyRef: document.querySelector('.body'),
         authModalEl: document.querySelector('.auth-modal'),
         authFormContainer: document.querySelector('.auth-backdrop'),
         registerBtn: document.querySelector('.js-register'),
         regBtn: document.querySelector('.js-register'),
         bodyEl: document.querySelector('.body'),
-    emailInput: document.querySelector('.auth-form-input')
+        emailInput: document.querySelector('.auth-form-input')
         
 }
 
@@ -56,7 +57,8 @@ function makeMarkup() {
 
  
 function closeAuthModal(event) {
-      event.preventDefault()
+    event.preventDefault();
+    bodyRef.querySelector('.auth-backdrop').remove();
     //  bodyEl.insertAdjacentHTML('')
      
     //  window.addEventListener('keydown', onKeyPress);

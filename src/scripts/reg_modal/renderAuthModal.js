@@ -24,11 +24,10 @@ function renderAuthModal() {
     const markup = AuthModalTmpl()
     makeMarkup(markup);
  
-    document.querySelector('.auth-modal-close-button').addEventListener("click", closeAuthModal());
+    document.querySelector('.auth-modal-close-button').addEventListener("click", closeAuthModal);
 
     
 }
-
 
 function makeMarkup() {
         refs.bodyEl.insertAdjacentHTML('beforeend', AuthModalTmpl());
@@ -52,29 +51,17 @@ function makeMarkup() {
             }
     }
 }
-
-
-
  
+window.addEventListener('keyup', onKeyPress)
 function closeAuthModal(event) {
     event.preventDefault();
-    bodyRef.querySelector('.auth-backdrop').remove();
-    //  bodyEl.insertAdjacentHTML('')
-     
-    //  window.addEventListener('keydown', onKeyPress);
-
-   function onKeyPress(event) {
-    const ESC_KEY_CODE = 'Escape';
-    
-    const isEscKey = event.code === ESC_KEY_CODE;
-    
-    if (isEscKey) {
+    refs.bodyRef.querySelector('.auth-backdrop').remove();
+}
+function onKeyPress(event) {
+    if (event.code === 'Escape') {
         closeAuthModal(event);
     }
   }
-    // event.preventDefault();
-    // refs.authFormContainer.innerHTML =' ';
-}
 
 // function validate(evt) {
 //     evt.preventDefault()

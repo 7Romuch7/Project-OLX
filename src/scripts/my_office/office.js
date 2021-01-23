@@ -16,7 +16,7 @@ export default function cabinetFetch() {
         .then(result => {
             console.log('office', result);
             if (localStorage['token']) {
-                document.querySelector('.main').innerHTML = cabinetPage(result.favorites);
+                document.querySelector('.header').innerHTML = cabinetPage(result.favorites);
             }
         })
 }

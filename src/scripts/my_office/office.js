@@ -1,4 +1,4 @@
-import cabinetPage from '../../templates/my_cabinet-page.hbs';
+import cabinetPage from '../../templates/my_office.hbs';
 
 const BASE_URL = 'https://callboard-backend.herokuapp.com';
 

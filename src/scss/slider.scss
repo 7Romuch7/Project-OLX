@@ -4,7 +4,6 @@
 
   max-width: 320px;
   height: calc(350px * 2 + 60px);
-  overflow: hidden;
 
   @media screen and(min-width: $tablet) {
     height: 390px;

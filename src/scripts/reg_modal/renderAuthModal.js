@@ -40,7 +40,8 @@ function makeMarkup() {
                 let password = document.querySelector('.js-reg-password').value;
 
                 const fetchRegistration = new FetchRegistration({ email, password });
-                    fetchRegistration.addNewUser();
+                fetchRegistration.addNewUser();
+                closeAuthModal();
             } else if(event.target.classList.contains("js-login")) {
                 event.preventDefault();
                 let email = document.querySelector('.js-reg-email').value;
@@ -48,13 +49,14 @@ function makeMarkup() {
 
                 const fetchLogIn = new FetchLogIn({ email, password });
                 fetchLogIn.getCurrentUserData();
+                closeAuthModal();
             }
     }
 }
  
 window.addEventListener('keyup', onKeyPress)
 function closeAuthModal(event) {
-    event.preventDefault();
+    //event.preventDefault();
     refs.bodyRef.querySelector('.auth-backdrop').remove();
 }
 function onKeyPress(event) {
